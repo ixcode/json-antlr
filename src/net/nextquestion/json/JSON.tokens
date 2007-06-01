@@ -1,0 +1,8 @@
+String=6
+UnicodeEscape=10
+Digit=8
+HexDigit=11
+EscapeSequence=9
+NUMBER=5
+STRING=4
+Number=7
