@@ -8,6 +8,7 @@ import javax.print.DocFlavor;
 import java.io.IOException;
 
 import com.sun.java_cup.internal.lexer;
+import com.sun.java_cup.internal.parser;
 
 /**
  * Created by IntelliJ IDEA.
@@ -21,75 +22,48 @@ public class JSONTests {
 
     @Test
     public void testSimpleString() throws IOException, RecognitionException {
-        JSONParser parser = createParser("\"abcd\"");
-        ParserRuleReturnScope result = parser.value();
-        String st = toStringTree(result);
-        assert st.equals("(STRING \"abcd\")") : "Expected (STRING \"abcd\"), but found " + st;
+        testViaTree("\"abcd\"", "(STRING \"abcd\")");
     }
 
     @Test
     public void testCharacterEscapes() throws IOException, RecognitionException {
-        JSONParser parser = createParser("\"ab\\\\cd\"");
-        ParserRuleReturnScope result = parser.value();
-        String st = toStringTree(result);
-        assert st.equals("(STRING \"ab\\\\cd\")") : "Expected (STRING \"ab\\\\cd\"), but found " + st;
+        testViaTree("\"ab\\\\cd\"", "(STRING \"ab\\\\cd\")");
     }
 
     @Test
     public void testUnicodeCharacter() throws IOException, RecognitionException {
-        JSONParser parser = createParser("\"\\u001C\"");
-        ParserRuleReturnScope result = parser.value();
-        String st = toStringTree(result);
-        assert st.equals("(STRING \"\\u001C\")") : "Expected (DocFlavor.STRING\"\\u001C\"), but found " + st;
+        testViaTree("\"\\u001C\"", "(STRING \"\\u001C\")");
     }
 
 
     @Test
     public void testPositiveInteger() throws IOException, RecognitionException {
-        JSONParser parser = createParser("12345");
-        ParserRuleReturnScope result = parser.value();
-        String st = toStringTree(result);
-        assert st.equals("(NUMBER 12345)") : "Expected (NUMBER 12345), but found " + st;
+        testViaTree("12345", "(NUMBER 12345)");
     }
 
     @Test
     public void testNegativeInteger() throws IOException, RecognitionException {
-        JSONParser parser = createParser("-12345");
-        ParserRuleReturnScope result = parser.value();
-        String st = toStringTree(result);
-        assert st.equals("(NUMBER -12345)") : "Expected (NUMBER -12345), but found " + st;
+        testViaTree("-12345", "(NUMBER -12345)");
     }
 
     @Test
     public void testPositiveRealNoExponent() throws IOException, RecognitionException {
-        JSONParser parser = createParser("123.45");
-        ParserRuleReturnScope result = parser.value();
-        String st = toStringTree(result);
-        assert st.equals("(NUMBER 123.45)") : "Expected (NUMBER 123.45), but found " + st;
+        testViaTree("123.45", "(NUMBER 123.45)");
     }
 
     @Test
     public void testNegativeRealNoExponent() throws IOException, RecognitionException {
-        JSONParser parser = createParser("-123.45");
-        ParserRuleReturnScope result = parser.value();
-        String st = toStringTree(result);
-        assert st.equals("(NUMBER -123.45)") : "Expected (NUMBER -123.45), but found " + st;
+        testViaTree("-123.45", "(NUMBER -123.45)");
     }
 
     @Test
     public void testPositiveRealExponent() throws IOException, RecognitionException {
-        JSONParser parser = createParser("123.45e4");
-        ParserRuleReturnScope result = parser.value();
-        String st = toStringTree(result);
-        assert st.equals("(NUMBER 123.45e4)") : "Expected (NUMBER 123.45e4), but found " + st;
+        testViaTree("123.45e4", "(NUMBER 123.45e4)");
     }
 
     @Test
     public void testNegativeRealExponent() throws IOException, RecognitionException {
-        JSONParser parser = createParser("123.45E-4");
-        ParserRuleReturnScope result = parser.value();
-        String st = toStringTree(result);
-        assert st.equals("(NUMBER 123.45E-4)") : "Expected (NUMBER 123.45E-4), but found " + st;
+        testViaTree("123.45E-4", "(NUMBER 123.45E-4)");
     }
 
     @Test
@@ -102,35 +76,40 @@ public class JSONTests {
 
     @Test
     public void testZero() throws IOException, RecognitionException {
-        JSONParser parser = createParser("0");
-        ParserRuleReturnScope result = parser.value();
-        String st = toStringTree(result);
-        assert st.equals("(NUMBER 0)") : "Expected (NUMBER 0), but found " + st;
+        testViaTree("0", "(NUMBER 0)");
     }
 
     @Test
     public void testObject() throws IOException, RecognitionException {
-        JSONParser parser = createParser("{\"name\":\"anObject\",\"value\":5}");
-        ParserRuleReturnScope result = parser.value();
-        String st = toStringTree(result);
-        String expected = "(OBJECT (FIELD \"name\" (STRING \"anObject\")) (FIELD \"value\" (NUMBER 5)))";
-        assert st.equals(expected) : "Expected " + expected + ", but found " + st;
+        testViaTree("{\"name\":\"anObject\",\"value\":5}",
+                "(OBJECT (FIELD \"name\" (STRING \"anObject\")) (FIELD \"value\" (NUMBER 5)))");
     }
 
     @Test
     public void testArray() throws IOException, RecognitionException {
-        JSONParser parser = createParser("[\"one\",2]");
-        ParserRuleReturnScope result = parser.value();
-        String st = toStringTree(result);
-        String expected = "(ARRAY (STRING \"one\") (NUMBER 2))";
-        assert st.equals(expected) : "Expected " + expected + ", but found " + st;
+        testViaTree("[\"one\",2]", "(ARRAY (STRING \"one\") (NUMBER 2))");
     }
 
+    @Test
+    public void testTrue() throws IOException, RecognitionException {
+        testViaTree("true", "TRUE");
+    }
 
-    private JSONParser createParser(JSONLexer lexer) throws IOException {
-        CommonTokenStream tokens = new CommonTokenStream(lexer);
-        JSONParser parser = new JSONParser(tokens);
-        return parser;
+    @Test
+    public void testFalse() throws IOException, RecognitionException {
+        testViaTree("false", "FALSE");
+    }
+
+    @Test
+    public void testNull() throws IOException, RecognitionException {
+        testViaTree("null", "NULL");
+    }
+
+    private void testViaTree(String source, String expected) throws IOException, RecognitionException {
+        JSONParser parser = createParser(source);
+        ParserRuleReturnScope result = parser.value();
+        String st = toStringTree(result);
+        assert st.equals(expected) : "Expected " + expected + ", but found " + st;
     }
 
     private JSONParser createParser(String testString) throws IOException {
