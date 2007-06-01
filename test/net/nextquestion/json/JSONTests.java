@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 import javax.print.DocFlavor;
 import java.io.IOException;
 
+import com.sun.java_cup.internal.lexer;
+
 /**
  * Created by IntelliJ IDEA.
  * User: rdclark
@@ -112,6 +114,15 @@ public class JSONTests {
         ParserRuleReturnScope result = parser.value();
         String st = toStringTree(result);
         String expected = "(OBJECT (FIELD \"name\" (STRING \"anObject\")) (FIELD \"value\" (NUMBER 5)))";
+        assert st.equals(expected) : "Expected " + expected + ", but found " + st;
+    }
+
+    @Test
+    public void testArray() throws IOException, RecognitionException {
+        JSONParser parser = createParser("[\"one\",2]");
+        ParserRuleReturnScope result = parser.value();
+        String st = toStringTree(result);
+        String expected = "(ARRAY (STRING \"one\") (NUMBER 2))";
         assert st.equals(expected) : "Expected " + expected + ", but found " + st;
     }
 

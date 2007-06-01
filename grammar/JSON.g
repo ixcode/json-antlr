@@ -5,7 +5,7 @@ options {
 }
 
 tokens {
-	STRING; NUMBER; OBJECT; FIELD;
+	STRING; NUMBER; OBJECT; FIELD; ARRAY;
 	COMMA = ',';
 }
 
@@ -23,12 +23,24 @@ value
 	: String -> ^(STRING String)
 	| Number -> ^(NUMBER Number)
 	| object
+	| array
 	;
 
 object	: '{' members '}' 
 	  -> ^(OBJECT members)
 	;
 
+array	: '[' elements ']'
+	  -> ^(ARRAY elements)
+	;
+
+elements: value 
+        (
+          (COMMA! value)+
+          | // no additional elements
+        )
+	;
+	
 members	:(pair COMMA) => pair (COMMA! pair)+
 	| pair
 	;
