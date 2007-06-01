@@ -18,6 +18,7 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSONParser.java" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSONParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSON.tokens" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSON.tokens" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/JSON.g" afterPath="$PROJECT_DIR$/grammar/JSON.g" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSON__.g" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSON__.g" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JSON Parser.iws" afterPath="$PROJECT_DIR$/JSON Parser.iws" />
@@ -150,7 +151,7 @@
       <file leaf-file-name="JSONTests.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="42" selection-start="3447" selection-end="3447" vertical-scroll-proportion="1.3189656">
+            <state line="113" column="73" selection-start="4460" selection-end="4460" vertical-scroll-proportion="0.60775864">
               <folding />
             </state>
           </provider>
@@ -558,7 +559,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="DBOutput" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="15" />
@@ -575,7 +576,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="12" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32860824" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32860824" order="2" />
       <window_info id="EclipseImporter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
@@ -695,15 +696,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="78" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.016877636">
           <folding>
-            <marker date="1180725051000" expanded="true" signature="15448:15455" placeholder="{...}" />
-            <marker date="1180725051000" expanded="true" signature="15448:15455" placeholder="{...}" />
+            <marker date="1180727405000" expanded="true" signature="18617:18624" placeholder="{...}" />
+            <marker date="1180727405000" expanded="true" signature="18617:18624" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="42" selection-start="3447" selection-end="3447" vertical-scroll-proportion="1.3189656">
+        <state line="113" column="73" selection-start="4460" selection-end="4460" vertical-scroll-proportion="0.60775864">
           <folding />
         </state>
       </provider>

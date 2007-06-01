@@ -5,7 +5,8 @@ options {
 }
 
 tokens {
-	STRING; NUMBER;
+	STRING; NUMBER; OBJECT; FIELD;
+	COMMA = ',';
 }
 
 @header {
@@ -21,6 +22,19 @@ package net.nextquestion.json;
 value
 	: String -> ^(STRING String)
 	| Number -> ^(NUMBER Number)
+	| object
+	;
+
+object	: '{' members '}' 
+	  -> ^(OBJECT members)
+	;
+
+members	:(pair COMMA) => pair (COMMA! pair)+
+	| pair
+	;
+	 
+pair	: String ':' value 
+	  -> ^(FIELD String value) 
 	;
 
 Number	: '-'? Digit+ ('.' Digit+)? (('E'|'e') ('+'|'-')? Digit+)?;

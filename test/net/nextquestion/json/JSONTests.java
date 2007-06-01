@@ -106,6 +106,15 @@ public class JSONTests {
         assert st.equals("(NUMBER 0)") : "Expected (NUMBER 0), but found " + st;
     }
 
+    @Test
+    public void testObject() throws IOException, RecognitionException {
+        JSONParser parser = createParser("{\"name\":\"anObject\",\"value\":5}");
+        ParserRuleReturnScope result = parser.value();
+        String st = toStringTree(result);
+        String expected = "(OBJECT (FIELD \"name\" (STRING \"anObject\")) (FIELD \"value\" (NUMBER 5)))";
+        assert st.equals(expected) : "Expected " + expected + ", but found " + st;
+    }
+
 
     private JSONParser createParser(JSONLexer lexer) throws IOException {
         CommonTokenStream tokens = new CommonTokenStream(lexer);
