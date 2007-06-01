@@ -7,6 +7,7 @@ options {
 tokens {
 	STRING; NUMBER; OBJECT; FIELD; ARRAY;
 	COMMA = ',';
+	TRUE; FALSE; NULL;
 }
 
 @header {
@@ -18,12 +19,14 @@ package net.nextquestion.json;
 }
 
 
-
 value
 	: String -> ^(STRING String)
 	| Number -> ^(NUMBER Number)
 	| object
 	| array
+	| 'true' -> TRUE
+	| 'false' -> FALSE
+	| 'null' -> NULL
 	;
 
 object	: '{' members '}' 
