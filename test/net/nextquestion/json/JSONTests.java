@@ -67,6 +67,30 @@ public class JSONTests {
     }
 
     @Test
+    public void testNegativeRealNoExponent() throws IOException, RecognitionException {
+        JSONParser parser = createParser("-123.45");
+        ParserRuleReturnScope result = parser.value();
+        String st = toStringTree(result);
+        assert st.equals("(NUMBER -123.45)") : "Expected (NUMBER -123.45), but found " + st;
+    }
+
+    @Test
+    public void testPositiveRealExponent() throws IOException, RecognitionException {
+        JSONParser parser = createParser("123.45e4");
+        ParserRuleReturnScope result = parser.value();
+        String st = toStringTree(result);
+        assert st.equals("(NUMBER 123.45e4)") : "Expected (NUMBER 123.45e4), but found " + st;
+    }
+
+    @Test
+    public void testNegativeRealExponent() throws IOException, RecognitionException {
+        JSONParser parser = createParser("123.45E-4");
+        ParserRuleReturnScope result = parser.value();
+        String st = toStringTree(result);
+        assert st.equals("(NUMBER 123.45E-4)") : "Expected (NUMBER 123.45E-4), but found " + st;
+    }
+
+    @Test
     public void testDoubleZero() throws IOException, RecognitionException {
         JSONParser parser = createParser("00");
         // TODO signal an invalid item and continue

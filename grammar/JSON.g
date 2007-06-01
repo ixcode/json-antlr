@@ -23,7 +23,7 @@ value
 	| Number -> ^(NUMBER Number)
 	;
 
-Number	: '-'? Digit+ ('.' Digit+)?;
+Number	: '-'? Digit+ ('.' Digit+)? (('E'|'e') ('+'|'-')? Digit+)?;
 
 String 	:
 	'"' ( EscapeSequence | ~('\u0000'..'\u001f' | '\\' | '\"' ) )* '"'

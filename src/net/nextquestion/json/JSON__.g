@@ -4,7 +4,7 @@ package net.nextquestion.json;
 }
 
 // $ANTLR src "/development/JSON Parser/grammar/JSON.g" 26
-Number	: '-'? Digit+ ('.' Digit+)?;
+Number	: '-'? Digit+ ('.' Digit+)? (('E'|'e') ('+'|'-')? Digit+)?;
 
 // $ANTLR src "/development/JSON Parser/grammar/JSON.g" 28
 String 	:
