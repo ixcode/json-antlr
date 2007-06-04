@@ -18,12 +18,15 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSONParser.java" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSONParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSON.tokens" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSON.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/JSON.g" afterPath="$PROJECT_DIR$/grammar/JSON.g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSON__.g" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSON__.g" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSON.tokens" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grammar/JSONTree.g" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/net/nextquestion/json/JSONParserTests.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grammar/JSON.tokens" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/net/nextquestion/json/JSONTests.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JSON Parser.iws" afterPath="$PROJECT_DIR$/JSON Parser.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSONLexer.java" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSONLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/net/nextquestion/json/JSONTests.java" afterPath="$PROJECT_DIR$/test/net/nextquestion/json/JSONTests.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/net/nextquestion/json/AbstractJSONTests.java" />
     </list>
   </component>
   <component name="ChangeListSynchronizer" />
@@ -148,10 +151,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JSONTests.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTests.java">
+      <file leaf-file-name="JSONParserTests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONParserTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="62" selection-start="4921" selection-end="4921" vertical-scroll-proportion="0.60775864">
+            <state line="19" column="77" selection-start="469" selection-end="469" vertical-scroll-proportion="0.23275863">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONTreeParserTests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="49" selection-start="694" selection-end="694" vertical-scroll-proportion="0.46551725">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractJSONTests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/AbstractJSONTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="0" selection-start="772" selection-end="772" vertical-scroll-proportion="0.36206895">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/nextquestion/json/JSONParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="13" selection-start="307" selection-end="307" vertical-scroll-proportion="0.026726058">
               <folding />
             </state>
           </provider>
@@ -161,6 +193,22 @@
         <entry file="file://$PROJECT_DIR$/grammar/JSON.g">
           <provider selected="true" editor-type-id="grammar">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONTree.g" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grammar/JSONTree.g">
+          <provider selected="true" editor-type-id="grammar">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONTree.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="148" column="63" selection-start="4832" selection-end="4832" vertical-scroll-proportion="0.75501114">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -345,7 +393,7 @@
     </subPane>
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="0.11111111" version="1" splitterProportion="0.5">
@@ -355,7 +403,7 @@
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <showStructure Favorites="false" ProjectPane="false" Scope="false" PackagesPane="false" />
+      <showStructure ProjectPane="false" PackagesPane="false" Scope="false" Favorites="false" />
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
@@ -396,18 +444,6 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="/Applications/IntelliJ IDEA 6.0.app/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
@@ -438,6 +474,18 @@
       </option>
       <option name="PROPERTIES_FILE" />
       <properties />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="/Applications/IntelliJ IDEA 6.0.app/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -558,7 +606,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
+    <frame x="1" y="22" width="1440" height="874" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
@@ -567,7 +615,7 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17769784" order="0" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="1" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294964" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32860824" order="10" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
@@ -685,20 +733,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/nextquestion/json/JSONParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="14" selection-start="3310" selection-end="3310" vertical-scroll-proportion="0.6877637">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/nextquestion/json/JSONLexer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="78" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.016877636">
           <folding>
-            <marker date="1180728264000" expanded="true" signature="20099:20106" placeholder="{...}" />
-            <marker date="1180728264000" expanded="true" signature="20099:20106" placeholder="{...}" />
+            <marker date="1180918039000" expanded="true" signature="22415:22422" placeholder="{...}" />
+            <marker date="1180918039000" expanded="true" signature="22415:22422" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/nextquestion/json/JSONParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="307" selection-end="307" vertical-scroll-proportion="0.026726058">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONParserTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="77" selection-start="469" selection-end="469" vertical-scroll-proportion="0.23275863">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="49" selection-start="694" selection-end="694" vertical-scroll-proportion="0.46551725">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/AbstractJSONTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="772" selection-end="772" vertical-scroll-proportion="0.36206895">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -707,11 +778,16 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTests.java">
+    <entry file="file://$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="62" selection-start="4921" selection-end="4921" vertical-scroll-proportion="0.60775864">
+        <state line="148" column="63" selection-start="4832" selection-end="4832" vertical-scroll-proportion="0.75501114">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/JSONTree.g">
+      <provider selected="true" editor-type-id="grammar">
+        <state />
       </provider>
     </entry>
   </component>

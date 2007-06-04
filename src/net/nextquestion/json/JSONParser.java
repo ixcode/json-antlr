@@ -1,4 +1,4 @@
-// $ANTLR 3.0 /development/JSON Parser/grammar/JSON.g 2007-06-01 13:37:19
+// $ANTLR 3.0 /development/JSON Parser/grammar/JSON.g 2007-06-03 17:17:17
 
 package net.nextquestion.json;
 
@@ -949,7 +949,7 @@ public class JSONParser extends Parser {
             if ( backtracking==0 ) stream_value.add(value23.getTree());
 
             // AST REWRITE
-            // elements: String, value
+            // elements: value, String
             // token labels: 
             // rule labels: retval
             // token list labels: 
