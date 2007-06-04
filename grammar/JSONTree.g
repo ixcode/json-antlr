@@ -64,7 +64,7 @@ number	returns [Object result]
 
 array	returns [List list]
 @init{ list = new ArrayList(); }
-	: (ARRAY member[list])
+	: (ARRAY member[list]+)
 	;
 	
 pair [Map map]

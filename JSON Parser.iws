@@ -18,9 +18,7 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/JSONTree.g" afterPath="$PROJECT_DIR$/grammar/JSONTree.g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java" afterPath="$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JSON Parser.iws" afterPath="$PROJECT_DIR$/JSON Parser.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java" />
     </list>
   </component>
   <component name="ChangeListSynchronizer" />
@@ -145,8 +143,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JSONTree.g" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="JSONTree.g" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grammar/JSONTree.g">
+          <provider selected="true" editor-type-id="grammar">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSON.g" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grammar/JSON.g">
           <provider selected="true" editor-type-id="grammar">
             <state />
           </provider>
@@ -714,11 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/JSON.g">
-      <provider selected="true" editor-type-id="grammar">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="13" selection-start="408" selection-end="408" vertical-scroll-proportion="0.27004218">
@@ -729,6 +729,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grammar/JSONTree.g">
+      <provider selected="true" editor-type-id="grammar">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/JSON.g">
       <provider selected="true" editor-type-id="grammar">
         <state />
       </provider>
