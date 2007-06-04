@@ -20,8 +20,8 @@ package net.nextquestion.json;
 
 
 value
-	: String -> ^(STRING String)
-	| Number -> ^(NUMBER Number)
+	: string
+	| number
 	| object
 	| array
 	| 'true' -> TRUE
@@ -29,10 +29,18 @@ value
 	| 'null' -> NULL
 	;
 
+string 	: String
+	  -> ^(STRING String)
+	;
+
+number	: Number Exponent? 
+	  -> ^(NUMBER Number Exponent?)
+	;
+
 object	: '{' members '}' 
 	  -> ^(OBJECT members)
 	;
-
+	
 array	: '[' elements ']'
 	  -> ^(ARRAY elements)
 	;
@@ -52,7 +60,9 @@ pair	: String ':' value
 	  -> ^(FIELD String value) 
 	;
 
-Number	: '-'? Digit+ ('.' Digit+)? (('E'|'e') ('+'|'-')? Digit+)?;
+Number	: '-'? Digit+ ( '.' Digit+)?;
+
+Exponent: ('e'|'E') '-'? Digit+;
 
 String 	:
 	'"' ( EscapeSequence | ~('\u0000'..'\u001f' | '\\' | '\"' ) )* '"'

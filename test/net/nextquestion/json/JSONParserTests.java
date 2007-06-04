@@ -54,12 +54,12 @@ public class JSONParserTests extends AbstractJSONTests {
 
     @Test
     public void testPositiveRealExponent() throws IOException, RecognitionException {
-        testViaStringTree("123.45e4", "(NUMBER 123.45e4)");
+        testViaStringTree("123.45e4", "(NUMBER 123.45 e4)");
     }
 
     @Test
     public void testNegativeRealExponent() throws IOException, RecognitionException {
-        testViaStringTree("123.45E-4", "(NUMBER 123.45E-4)");
+        testViaStringTree("123.45E-4", "(NUMBER 123.45 E-4)");
     }
 
     @Test
