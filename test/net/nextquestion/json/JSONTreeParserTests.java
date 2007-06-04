@@ -22,6 +22,16 @@ public class JSONTreeParserTests extends AbstractJSONTests {
     }
 
     @Test
+    public void testStringWithNewine() throws IOException, RecognitionException {
+        testViaTreeParser("\"new\\nline\"", "new\nline");
+    }
+
+    @Test
+    public void testStringWithUnicode() throws IOException, RecognitionException {
+        testViaTreeParser("\" \\u007E \"", " ~ "); // \u007E is a tilde.
+    }
+
+    @Test
     public void testBooleans() throws IOException, RecognitionException {
         testViaTreeParser("true", Boolean.TRUE);
         testViaTreeParser("false", Boolean.FALSE);
