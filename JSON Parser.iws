@@ -17,16 +17,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grammar/JSONTree.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar" afterPath="$PROJECT_DIR$/grammar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSONParser.java" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSONParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/JSON.g" afterPath="$PROJECT_DIR$/grammar/JSON.g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/net/nextquestion/json/JSONParserTests.java" afterPath="$PROJECT_DIR$/test/net/nextquestion/json/JSONParserTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java" afterPath="$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/JSONTree.g" afterPath="$PROJECT_DIR$/grammar/JSONTree.g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/JSON.tokens" afterPath="$PROJECT_DIR$/grammar/JSON.tokens" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JSON Parser.iws" afterPath="$PROJECT_DIR$/JSON Parser.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSONLexer.java" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSONLexer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java" />
     </list>
   </component>
@@ -98,6 +91,21 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java" line="53" class="net.nextquestion.json.JSONTreeParserTests" package="net.nextquestion.json">
+        <option name="ENABLED" value="true" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -155,27 +163,11 @@
       <file leaf-file-name="JSONTreeParserTests.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="5" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.76724136">
+            <state line="56" column="69" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.60775864">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONParserTests.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONParserTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="55" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.3577586">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSON.g" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grammar/JSON.g">
-          <provider selected="true" editor-type-id="grammar">
-            <state />
           </provider>
         </entry>
       </file>
@@ -189,10 +181,9 @@
       <file leaf-file-name="JSONTree.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.2650334">
+            <state line="63" column="22" selection-start="2420" selection-end="2420" vertical-scroll-proportion="0.9198218">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#getTokenNames#0;class#JSONTree#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -396,6 +387,7 @@
     </navigator>
   </component>
   <component name="PropertiesComponent">
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -592,7 +584,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="22" width="1440" height="874" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
@@ -600,9 +592,9 @@
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="9" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17769784" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17769784" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" order="1" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19136691" order="1" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19136691" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32860824" order="10" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
@@ -723,8 +715,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="78" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.016877636">
           <folding>
-            <marker date="1180925531000" expanded="true" signature="20952:20959" placeholder="{...}" />
-            <marker date="1180925531000" expanded="true" signature="20952:20959" placeholder="{...}" />
+            <marker date="1180933526000" expanded="true" signature="20952:20959" placeholder="{...}" />
+            <marker date="1180933526000" expanded="true" signature="20952:20959" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -745,7 +737,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONParserTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="55" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.3577586">
+        <state line="85" column="39" selection-start="2627" selection-end="2640" vertical-scroll-proportion="0.707989">
           <folding />
         </state>
       </provider>
@@ -755,24 +747,23 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="22" selection-start="2420" selection-end="2420" vertical-scroll-proportion="0.9198218">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grammar/JSONTree.g">
       <provider selected="true" editor-type-id="grammar">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.2650334">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getTokenNames#0;class#JSONTree#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="5" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.76724136">
+        <state line="56" column="69" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.60775864">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

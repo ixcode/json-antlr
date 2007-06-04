@@ -7,14 +7,22 @@ ASTLabelType=CommonTree; // $label will have type CommonTree
 
 @header {
 package net.nextquestion.json;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+
+
 }
 
 @members {
-    private Object processNumber(String numberBody, CommonTree exponentToken) {
+    private Object extractNumber(CommonTree numberToken, CommonTree exponentToken) {
+        String numberBody = numberToken.getText();
         String exponent = (exponentToken == null) ? null : exponentToken.getText().substring(1); // remove the 'e' prefix if there
         boolean isReal = numberBody.indexOf('.') >= 0 || exponent != null;
         if (!isReal) {
-            return Integer.getInteger(numberBody);
+            return new Integer(numberBody);
         } else {
             double result = Double.parseDouble(numberBody);
             if (exponent != null) {
@@ -23,12 +31,18 @@ package net.nextquestion.json;
             return new Double(result);
         }
     }
+    
+    private String extractString(CommonTree token) {
+        String s = token.getText();
+        return s.substring(1, s.length() - 1);
+    }
+
 }
 
 value returns [Object result]
 	: s=string { $result = s; } 
 	| n=number { $result = n; }
-//	| object
+	| o=object { $result = o; }
 //	| array
 	| TRUE { $result=Boolean.TRUE; }
 	| FALSE {$result = Boolean.FALSE; }
@@ -37,22 +51,26 @@ value returns [Object result]
 
 string returns [String result]
 	: ^(STRING String)
-	  { String s = $String.text; $result = s.substring(1, s.length()-1); }
+	  { $result = extractString($String); }
 	;
 	
-// object	: ^(OBJECT pair+)
-//	;
+object returns [Map result]
+@init { result = new HashMap(); }
+	: ^(OBJECT pair[$result]+)
+	;
 
 number	returns [Object result] 
 	: ^(NUMBER Number Exponent?)
-	  { $result = processNumber($Number.text, $Exponent); }
+	  { $result = extractNumber($Number, $Exponent); }
 	;
 
 // array	: (ARRAY value+)
 //	;
 	 
-// pair	: ^(FIELD string value) 
-//	;
+pair [Map map]
+	: ^(FIELD key=String v=value) 
+	   { $map.put(extractString($key), v); }
+	;
 
 
 
