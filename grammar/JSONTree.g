@@ -12,8 +12,6 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
-
-
 }
 
 @members {
@@ -64,14 +62,19 @@ number	returns [Object result]
 	  { $result = extractNumber($Number, $Exponent); }
 	;
 
-// array	: (ARRAY value+)
-//	;
-	 
+array	returns [List list]
+@init{ list = new ArrayList(); }
+	: (ARRAY member[list]+)
+	;
+	
 pair [Map map]
 	: ^(FIELD key=String v=value) 
 	   { $map.put(extractString($key), v); }
 	;
 
-
+member[List list]
+	: v=value
+	  {list.add(v); }
+	;
 
 
