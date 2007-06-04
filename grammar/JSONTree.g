@@ -41,7 +41,7 @@ value returns [Object result]
 	: s=string { $result = s; } 
 	| n=number { $result = n; }
 	| o=object { $result = o; }
-//	| array
+	| a=array { $result = a; }
 	| TRUE { $result=Boolean.TRUE; }
 	| FALSE {$result = Boolean.FALSE; }
 	| NULL {$result = null; }
@@ -64,7 +64,7 @@ number	returns [Object result]
 
 array	returns [List list]
 @init{ list = new ArrayList(); }
-	: (ARRAY member[list]+)
+	: (ARRAY member[list])
 	;
 	
 pair [Map map]

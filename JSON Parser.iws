@@ -17,7 +17,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/JSONTree.g" afterPath="$PROJECT_DIR$/grammar/JSONTree.g" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java" afterPath="$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JSON Parser.iws" afterPath="$PROJECT_DIR$/JSON Parser.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java" />
     </list>
   </component>
   <component name="ChangeListSynchronizer" />
@@ -88,21 +91,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java" line="53" class="net.nextquestion.json.JSONTreeParserTests" package="net.nextquestion.json">
-        <option name="ENABLED" value="true" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -157,32 +145,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JSONTreeParserTests.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="69" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.7355372">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="JSONTree.g" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grammar/JSONTree.g">
           <provider selected="true" editor-type-id="grammar">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONTree.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="22" selection-start="2420" selection-end="2420" vertical-scroll-proportion="0.580872">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
           </provider>
         </entry>
       </file>
@@ -712,8 +678,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="78" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.016877636">
           <folding>
-            <marker date="1180933526000" expanded="true" signature="20952:20959" placeholder="{...}" />
-            <marker date="1180933526000" expanded="true" signature="20952:20959" placeholder="{...}" />
+            <marker date="1180935303000" expanded="true" signature="20952:20959" placeholder="{...}" />
+            <marker date="1180935303000" expanded="true" signature="20952:20959" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -739,6 +705,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="60" selection-start="2434" selection-end="2434" vertical-scroll-proportion="1.1508621">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grammar/JSON.g">
       <provider selected="true" editor-type-id="grammar">
         <state />
@@ -746,16 +721,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/nextquestion/json/JSONTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="22" selection-start="2420" selection-end="2420" vertical-scroll-proportion="0.580872">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="69" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.7355372">
+        <state line="16" column="13" selection-start="408" selection-end="408" vertical-scroll-proportion="0.27004218">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

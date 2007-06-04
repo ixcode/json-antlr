@@ -49,12 +49,23 @@ public class JSONTreeParserTests extends AbstractJSONTests {
     @Test
     public void testObject() throws IOException, RecognitionException {
         JSONTree parser = createTreeParser("{\"one\":2,\"two\":3}");
-        Map result = (Map)parser.value();
+        Map result = (Map) parser.value();
         assert result != null : "null result";
         int firstValue = (Integer) result.get("one");
         assert firstValue == 2 : "Expected integer 2 at key \"one\" but found " + firstValue;
         int secondValue = (Integer) result.get("two");
         assert secondValue == 3 : "Expected integer 3 at key \"two\" but found " + secondValue;
+    }
+
+    @Test
+    public void testArray() throws IOException, RecognitionException {
+        JSONTree parser = createTreeParser("[\"one\",2]");
+        List result = (List) parser.value();
+        assert result != null : "null result";
+        String firstValue = (String) result.get(0);
+        assert "one".equals(firstValue) : "Expected \"one\" at (0) but found " + firstValue;
+        int secondValue = (Integer) result.get(1);
+        assert secondValue == 2 : "Expected integer 2 at (1) but found " + secondValue;
     }
 
     protected void testViaTreeParser(String testString, Object expected) throws IOException, RecognitionException {
