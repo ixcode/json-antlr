@@ -1,4 +1,4 @@
-// $ANTLR 3.0 /development/JSON Parser/grammar/JSON.g 2007-06-03 22:58:45
+// $ANTLR 3.0 /development/JSON Parser/grammar/JSON.g 2007-06-03 23:04:16
 
 package net.nextquestion.json;
 
@@ -16,21 +16,22 @@ public class JSONLexer extends Lexer {
     public static final int ARRAY=8;
     public static final int Digit=16;
     public static final int T22=22;
-    public static final int HexDigit=19;
+    public static final int HexDigit=20;
     public static final int NUMBER=5;
+    public static final int WS=18;
     public static final int STRING=4;
     public static final int FALSE=11;
+    public static final int T28=28;
     public static final int T23=23;
     public static final int FIELD=7;
-    public static final int T20=20;
     public static final int String=13;
     public static final int T25=25;
-    public static final int UnicodeEscape=18;
+    public static final int UnicodeEscape=19;
     public static final int EscapeSequence=17;
     public static final int T26=26;
     public static final int EOF=-1;
     public static final int NULL=12;
-    public static final int Tokens=28;
+    public static final int Tokens=29;
     public static final int T27=27;
     public static final int Number=14;
     public static final int T24=24;
@@ -59,33 +60,14 @@ public class JSONLexer extends Lexer {
     }
     // $ANTLR end COMMA
 
-    // $ANTLR start T20
-    public final void mT20() throws RecognitionException {
-        try {
-            int _type = T20;
-            // /development/JSON Parser/grammar/JSON.g:7:7: ( 'true' )
-            // /development/JSON Parser/grammar/JSON.g:7:7: 'true'
-            {
-            match("true"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T20
-
     // $ANTLR start T21
     public final void mT21() throws RecognitionException {
         try {
             int _type = T21;
-            // /development/JSON Parser/grammar/JSON.g:8:7: ( 'false' )
-            // /development/JSON Parser/grammar/JSON.g:8:7: 'false'
+            // /development/JSON Parser/grammar/JSON.g:7:7: ( 'true' )
+            // /development/JSON Parser/grammar/JSON.g:7:7: 'true'
             {
-            match("false"); 
+            match("true"); 
 
 
             }
@@ -101,10 +83,10 @@ public class JSONLexer extends Lexer {
     public final void mT22() throws RecognitionException {
         try {
             int _type = T22;
-            // /development/JSON Parser/grammar/JSON.g:9:7: ( 'null' )
-            // /development/JSON Parser/grammar/JSON.g:9:7: 'null'
+            // /development/JSON Parser/grammar/JSON.g:8:7: ( 'false' )
+            // /development/JSON Parser/grammar/JSON.g:8:7: 'false'
             {
-            match("null"); 
+            match("false"); 
 
 
             }
@@ -120,10 +102,11 @@ public class JSONLexer extends Lexer {
     public final void mT23() throws RecognitionException {
         try {
             int _type = T23;
-            // /development/JSON Parser/grammar/JSON.g:10:7: ( '{' )
-            // /development/JSON Parser/grammar/JSON.g:10:7: '{'
+            // /development/JSON Parser/grammar/JSON.g:9:7: ( 'null' )
+            // /development/JSON Parser/grammar/JSON.g:9:7: 'null'
             {
-            match('{'); 
+            match("null"); 
+
 
             }
 
@@ -138,10 +121,10 @@ public class JSONLexer extends Lexer {
     public final void mT24() throws RecognitionException {
         try {
             int _type = T24;
-            // /development/JSON Parser/grammar/JSON.g:11:7: ( '}' )
-            // /development/JSON Parser/grammar/JSON.g:11:7: '}'
+            // /development/JSON Parser/grammar/JSON.g:10:7: ( '{' )
+            // /development/JSON Parser/grammar/JSON.g:10:7: '{'
             {
-            match('}'); 
+            match('{'); 
 
             }
 
@@ -156,10 +139,10 @@ public class JSONLexer extends Lexer {
     public final void mT25() throws RecognitionException {
         try {
             int _type = T25;
-            // /development/JSON Parser/grammar/JSON.g:12:7: ( '[' )
-            // /development/JSON Parser/grammar/JSON.g:12:7: '['
+            // /development/JSON Parser/grammar/JSON.g:11:7: ( '}' )
+            // /development/JSON Parser/grammar/JSON.g:11:7: '}'
             {
-            match('['); 
+            match('}'); 
 
             }
 
@@ -174,10 +157,10 @@ public class JSONLexer extends Lexer {
     public final void mT26() throws RecognitionException {
         try {
             int _type = T26;
-            // /development/JSON Parser/grammar/JSON.g:13:7: ( ']' )
-            // /development/JSON Parser/grammar/JSON.g:13:7: ']'
+            // /development/JSON Parser/grammar/JSON.g:12:7: ( '[' )
+            // /development/JSON Parser/grammar/JSON.g:12:7: '['
             {
-            match(']'); 
+            match('['); 
 
             }
 
@@ -192,6 +175,24 @@ public class JSONLexer extends Lexer {
     public final void mT27() throws RecognitionException {
         try {
             int _type = T27;
+            // /development/JSON Parser/grammar/JSON.g:13:7: ( ']' )
+            // /development/JSON Parser/grammar/JSON.g:13:7: ']'
+            {
+            match(']'); 
+
+            }
+
+            this.type = _type;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end T27
+
+    // $ANTLR start T28
+    public final void mT28() throws RecognitionException {
+        try {
+            int _type = T28;
             // /development/JSON Parser/grammar/JSON.g:14:7: ( ':' )
             // /development/JSON Parser/grammar/JSON.g:14:7: ':'
             {
@@ -204,7 +205,7 @@ public class JSONLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end T27
+    // $ANTLR end T28
 
     // $ANTLR start Number
     public final void mNumber() throws RecognitionException {
@@ -457,127 +458,184 @@ public class JSONLexer extends Lexer {
     }
     // $ANTLR end String
 
+    // $ANTLR start WS
+    public final void mWS() throws RecognitionException {
+        try {
+            int _type = WS;
+            // /development/JSON Parser/grammar/JSON.g:71:5: ( ( ' ' | '\\n' | '\\r' | '\\t' )+ )
+            // /development/JSON Parser/grammar/JSON.g:71:5: ( ' ' | '\\n' | '\\r' | '\\t' )+
+            {
+            // /development/JSON Parser/grammar/JSON.g:71:5: ( ' ' | '\\n' | '\\r' | '\\t' )+
+            int cnt8=0;
+            loop8:
+            do {
+                int alt8=2;
+                int LA8_0 = input.LA(1);
+
+                if ( ((LA8_0>='\t' && LA8_0<='\n')||LA8_0=='\r'||LA8_0==' ') ) {
+                    alt8=1;
+                }
+
+
+                switch (alt8) {
+            	case 1 :
+            	    // /development/JSON Parser/grammar/JSON.g:
+            	    {
+            	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
+            	        input.consume();
+
+            	    }
+            	    else {
+            	        MismatchedSetException mse =
+            	            new MismatchedSetException(null,input);
+            	        recover(mse);    throw mse;
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt8 >= 1 ) break loop8;
+                        EarlyExitException eee =
+                            new EarlyExitException(8, input);
+                        throw eee;
+                }
+                cnt8++;
+            } while (true);
+
+            channel=HIDDEN;
+
+            }
+
+            this.type = _type;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end WS
+
     // $ANTLR start EscapeSequence
     public final void mEscapeSequence() throws RecognitionException {
         try {
-            // /development/JSON Parser/grammar/JSON.g:73:10: ( '\\\\' ( UnicodeEscape | 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
-            // /development/JSON Parser/grammar/JSON.g:73:10: '\\\\' ( UnicodeEscape | 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+            // /development/JSON Parser/grammar/JSON.g:74:10: ( '\\\\' ( UnicodeEscape | 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+            // /development/JSON Parser/grammar/JSON.g:74:10: '\\\\' ( UnicodeEscape | 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
             {
             match('\\'); 
-            // /development/JSON Parser/grammar/JSON.g:73:15: ( UnicodeEscape | 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
-            int alt8=9;
+            // /development/JSON Parser/grammar/JSON.g:74:15: ( UnicodeEscape | 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+            int alt9=9;
             switch ( input.LA(1) ) {
             case 'u':
                 {
-                alt8=1;
+                alt9=1;
                 }
                 break;
             case 'b':
                 {
-                alt8=2;
+                alt9=2;
                 }
                 break;
             case 't':
                 {
-                alt8=3;
+                alt9=3;
                 }
                 break;
             case 'n':
                 {
-                alt8=4;
+                alt9=4;
                 }
                 break;
             case 'f':
                 {
-                alt8=5;
+                alt9=5;
                 }
                 break;
             case 'r':
                 {
-                alt8=6;
+                alt9=6;
                 }
                 break;
             case '\"':
                 {
-                alt8=7;
+                alt9=7;
                 }
                 break;
             case '\'':
                 {
-                alt8=8;
+                alt9=8;
                 }
                 break;
             case '\\':
                 {
-                alt8=9;
+                alt9=9;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("73:15: ( UnicodeEscape | 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )", 8, 0, input);
+                    new NoViableAltException("74:15: ( UnicodeEscape | 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )", 9, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt8) {
+            switch (alt9) {
                 case 1 :
-                    // /development/JSON Parser/grammar/JSON.g:73:16: UnicodeEscape
+                    // /development/JSON Parser/grammar/JSON.g:74:16: UnicodeEscape
                     {
                     mUnicodeEscape(); 
 
                     }
                     break;
                 case 2 :
-                    // /development/JSON Parser/grammar/JSON.g:73:31: 'b'
+                    // /development/JSON Parser/grammar/JSON.g:74:31: 'b'
                     {
                     match('b'); 
 
                     }
                     break;
                 case 3 :
-                    // /development/JSON Parser/grammar/JSON.g:73:35: 't'
+                    // /development/JSON Parser/grammar/JSON.g:74:35: 't'
                     {
                     match('t'); 
 
                     }
                     break;
                 case 4 :
-                    // /development/JSON Parser/grammar/JSON.g:73:39: 'n'
+                    // /development/JSON Parser/grammar/JSON.g:74:39: 'n'
                     {
                     match('n'); 
 
                     }
                     break;
                 case 5 :
-                    // /development/JSON Parser/grammar/JSON.g:73:43: 'f'
+                    // /development/JSON Parser/grammar/JSON.g:74:43: 'f'
                     {
                     match('f'); 
 
                     }
                     break;
                 case 6 :
-                    // /development/JSON Parser/grammar/JSON.g:73:47: 'r'
+                    // /development/JSON Parser/grammar/JSON.g:74:47: 'r'
                     {
                     match('r'); 
 
                     }
                     break;
                 case 7 :
-                    // /development/JSON Parser/grammar/JSON.g:73:51: '\\\"'
+                    // /development/JSON Parser/grammar/JSON.g:74:51: '\\\"'
                     {
                     match('\"'); 
 
                     }
                     break;
                 case 8 :
-                    // /development/JSON Parser/grammar/JSON.g:73:56: '\\''
+                    // /development/JSON Parser/grammar/JSON.g:74:56: '\\''
                     {
                     match('\''); 
 
                     }
                     break;
                 case 9 :
-                    // /development/JSON Parser/grammar/JSON.g:73:61: '\\\\'
+                    // /development/JSON Parser/grammar/JSON.g:74:61: '\\\\'
                     {
                     match('\\'); 
 
@@ -598,8 +656,8 @@ public class JSONLexer extends Lexer {
     // $ANTLR start UnicodeEscape
     public final void mUnicodeEscape() throws RecognitionException {
         try {
-            // /development/JSON Parser/grammar/JSON.g:77:4: ( 'u' HexDigit HexDigit HexDigit HexDigit )
-            // /development/JSON Parser/grammar/JSON.g:77:4: 'u' HexDigit HexDigit HexDigit HexDigit
+            // /development/JSON Parser/grammar/JSON.g:78:4: ( 'u' HexDigit HexDigit HexDigit HexDigit )
+            // /development/JSON Parser/grammar/JSON.g:78:4: 'u' HexDigit HexDigit HexDigit HexDigit
             {
             match('u'); 
             mHexDigit(); 
@@ -618,7 +676,7 @@ public class JSONLexer extends Lexer {
     // $ANTLR start HexDigit
     public final void mHexDigit() throws RecognitionException {
         try {
-            // /development/JSON Parser/grammar/JSON.g:81:4: ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )
+            // /development/JSON Parser/grammar/JSON.g:82:4: ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )
             // /development/JSON Parser/grammar/JSON.g:
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
@@ -643,8 +701,8 @@ public class JSONLexer extends Lexer {
     // $ANTLR start Digit
     public final void mDigit() throws RecognitionException {
         try {
-            // /development/JSON Parser/grammar/JSON.g:85:4: ( '0' .. '9' )
-            // /development/JSON Parser/grammar/JSON.g:85:4: '0' .. '9'
+            // /development/JSON Parser/grammar/JSON.g:86:4: ( '0' .. '9' )
+            // /development/JSON Parser/grammar/JSON.g:86:4: '0' .. '9'
             {
             matchRange('0','9'); 
 
@@ -657,52 +715,52 @@ public class JSONLexer extends Lexer {
     // $ANTLR end Digit
 
     public void mTokens() throws RecognitionException {
-        // /development/JSON Parser/grammar/JSON.g:1:10: ( COMMA | T20 | T21 | T22 | T23 | T24 | T25 | T26 | T27 | Number | Exponent | String )
-        int alt9=12;
+        // /development/JSON Parser/grammar/JSON.g:1:10: ( COMMA | T21 | T22 | T23 | T24 | T25 | T26 | T27 | T28 | Number | Exponent | String | WS )
+        int alt10=13;
         switch ( input.LA(1) ) {
         case ',':
             {
-            alt9=1;
+            alt10=1;
             }
             break;
         case 't':
             {
-            alt9=2;
+            alt10=2;
             }
             break;
         case 'f':
             {
-            alt9=3;
+            alt10=3;
             }
             break;
         case 'n':
             {
-            alt9=4;
+            alt10=4;
             }
             break;
         case '{':
             {
-            alt9=5;
+            alt10=5;
             }
             break;
         case '}':
             {
-            alt9=6;
+            alt10=6;
             }
             break;
         case '[':
             {
-            alt9=7;
+            alt10=7;
             }
             break;
         case ']':
             {
-            alt9=8;
+            alt10=8;
             }
             break;
         case ':':
             {
-            alt9=9;
+            alt10=9;
             }
             break;
         case '-':
@@ -717,28 +775,36 @@ public class JSONLexer extends Lexer {
         case '8':
         case '9':
             {
-            alt9=10;
+            alt10=10;
             }
             break;
         case 'E':
         case 'e':
             {
-            alt9=11;
+            alt10=11;
             }
             break;
         case '\"':
             {
-            alt9=12;
+            alt10=12;
+            }
+            break;
+        case '\t':
+        case '\n':
+        case '\r':
+        case ' ':
+            {
+            alt10=13;
             }
             break;
         default:
             NoViableAltException nvae =
-                new NoViableAltException("1:1: Tokens : ( COMMA | T20 | T21 | T22 | T23 | T24 | T25 | T26 | T27 | Number | Exponent | String );", 9, 0, input);
+                new NoViableAltException("1:1: Tokens : ( COMMA | T21 | T22 | T23 | T24 | T25 | T26 | T27 | T28 | Number | Exponent | String | WS );", 10, 0, input);
 
             throw nvae;
         }
 
-        switch (alt9) {
+        switch (alt10) {
             case 1 :
                 // /development/JSON Parser/grammar/JSON.g:1:10: COMMA
                 {
@@ -747,58 +813,58 @@ public class JSONLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // /development/JSON Parser/grammar/JSON.g:1:16: T20
-                {
-                mT20(); 
-
-                }
-                break;
-            case 3 :
-                // /development/JSON Parser/grammar/JSON.g:1:20: T21
+                // /development/JSON Parser/grammar/JSON.g:1:16: T21
                 {
                 mT21(); 
 
                 }
                 break;
-            case 4 :
-                // /development/JSON Parser/grammar/JSON.g:1:24: T22
+            case 3 :
+                // /development/JSON Parser/grammar/JSON.g:1:20: T22
                 {
                 mT22(); 
 
                 }
                 break;
-            case 5 :
-                // /development/JSON Parser/grammar/JSON.g:1:28: T23
+            case 4 :
+                // /development/JSON Parser/grammar/JSON.g:1:24: T23
                 {
                 mT23(); 
 
                 }
                 break;
-            case 6 :
-                // /development/JSON Parser/grammar/JSON.g:1:32: T24
+            case 5 :
+                // /development/JSON Parser/grammar/JSON.g:1:28: T24
                 {
                 mT24(); 
 
                 }
                 break;
-            case 7 :
-                // /development/JSON Parser/grammar/JSON.g:1:36: T25
+            case 6 :
+                // /development/JSON Parser/grammar/JSON.g:1:32: T25
                 {
                 mT25(); 
 
                 }
                 break;
-            case 8 :
-                // /development/JSON Parser/grammar/JSON.g:1:40: T26
+            case 7 :
+                // /development/JSON Parser/grammar/JSON.g:1:36: T26
                 {
                 mT26(); 
 
                 }
                 break;
-            case 9 :
-                // /development/JSON Parser/grammar/JSON.g:1:44: T27
+            case 8 :
+                // /development/JSON Parser/grammar/JSON.g:1:40: T27
                 {
                 mT27(); 
+
+                }
+                break;
+            case 9 :
+                // /development/JSON Parser/grammar/JSON.g:1:44: T28
+                {
+                mT28(); 
 
                 }
                 break;
@@ -820,6 +886,13 @@ public class JSONLexer extends Lexer {
                 // /development/JSON Parser/grammar/JSON.g:1:64: String
                 {
                 mString(); 
+
+                }
+                break;
+            case 13 :
+                // /development/JSON Parser/grammar/JSON.g:1:71: WS
+                {
+                mWS(); 
 
                 }
                 break;
