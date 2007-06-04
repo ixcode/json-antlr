@@ -64,7 +64,7 @@ number	returns [Object result]
 
 array	returns [List list]
 @init{ list = new ArrayList(); }
-	: (ARRAY member[list]+)
+	: ^(ARRAY (v=value {$list.add(v); })+ )
 	;
 	
 pair [Map map]
@@ -72,9 +72,5 @@ pair [Map map]
 	   { $map.put(extractString($key), v); }
 	;
 
-member[List list]
-	: v=value
-	  {list.add(v); }
-	;
 
 

@@ -47,7 +47,7 @@ array	: '[' elements ']'
 
 elements: value 
         (
-          (COMMA value)+
+          (COMMA! value)+
           | // no additional elements
         )
 	;
