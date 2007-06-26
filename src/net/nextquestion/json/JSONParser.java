@@ -1,4 +1,4 @@
-// $ANTLR 3.0 /development/JSON Parser/grammar/JSON.g 2007-06-04 10:28:32
+// $ANTLR 3.0 /development/antlr/JSON Parser/grammar/JSON.g 2007-06-26 13:59:59
 
 package net.nextquestion.json;
 
@@ -37,7 +37,7 @@ public class JSONParser extends Parser {
 
         public JSONParser(TokenStream input) {
             super(input);
-            ruleMemo = new HashMap[9+1];
+            ruleMemo = new HashMap[10+1];
          }
         
     protected TreeAdaptor adaptor = new CommonTreeAdaptor();
@@ -50,7 +50,7 @@ public class JSONParser extends Parser {
     }
 
     public String[] getTokenNames() { return tokenNames; }
-    public String getGrammarFileName() { return "/development/JSON Parser/grammar/JSON.g"; }
+    public String getGrammarFileName() { return "/development/antlr/JSON Parser/grammar/JSON.g"; }
 
 
     public static class value_return extends ParserRuleReturnScope {
@@ -59,7 +59,7 @@ public class JSONParser extends Parser {
     };
 
     // $ANTLR start value
-    // /development/JSON Parser/grammar/JSON.g:22:1: value : ( string | number | object | array | 'true' -> TRUE | 'false' -> FALSE | 'null' -> NULL );
+    // /development/antlr/JSON Parser/grammar/JSON.g:22:1: value : ( string | number | object | array | 'true' -> TRUE | 'false' -> FALSE | 'null' -> NULL );
     public final value_return value() throws RecognitionException {
         value_return retval = new value_return();
         retval.start = input.LT(1);
@@ -86,7 +86,7 @@ public class JSONParser extends Parser {
         RewriteRuleTokenStream stream_23=new RewriteRuleTokenStream(adaptor,"token 23");
 
         try {
-            // /development/JSON Parser/grammar/JSON.g:23:4: ( string | number | object | array | 'true' -> TRUE | 'false' -> FALSE | 'null' -> NULL )
+            // /development/antlr/JSON Parser/grammar/JSON.g:23:4: ( string | number | object | array | 'true' -> TRUE | 'false' -> FALSE | 'null' -> NULL )
             int alt1=7;
             switch ( input.LA(1) ) {
             case String:
@@ -134,7 +134,7 @@ public class JSONParser extends Parser {
 
             switch (alt1) {
                 case 1 :
-                    // /development/JSON Parser/grammar/JSON.g:23:4: string
+                    // /development/antlr/JSON Parser/grammar/JSON.g:23:4: string
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -147,7 +147,7 @@ public class JSONParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /development/JSON Parser/grammar/JSON.g:24:4: number
+                    // /development/antlr/JSON Parser/grammar/JSON.g:24:4: number
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -160,7 +160,7 @@ public class JSONParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /development/JSON Parser/grammar/JSON.g:25:4: object
+                    // /development/antlr/JSON Parser/grammar/JSON.g:25:4: object
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -173,7 +173,7 @@ public class JSONParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /development/JSON Parser/grammar/JSON.g:26:4: array
+                    // /development/antlr/JSON Parser/grammar/JSON.g:26:4: array
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -186,7 +186,7 @@ public class JSONParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /development/JSON Parser/grammar/JSON.g:27:4: 'true'
+                    // /development/antlr/JSON Parser/grammar/JSON.g:27:4: 'true'
                     {
                     string_literal5=(Token)input.LT(1);
                     match(input,21,FOLLOW_21_in_value99); if (failed) return retval;
@@ -215,7 +215,7 @@ public class JSONParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /development/JSON Parser/grammar/JSON.g:28:4: 'false'
+                    // /development/antlr/JSON Parser/grammar/JSON.g:28:4: 'false'
                     {
                     string_literal6=(Token)input.LT(1);
                     match(input,22,FOLLOW_22_in_value108); if (failed) return retval;
@@ -244,7 +244,7 @@ public class JSONParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /development/JSON Parser/grammar/JSON.g:29:4: 'null'
+                    // /development/antlr/JSON Parser/grammar/JSON.g:29:4: 'null'
                     {
                     string_literal7=(Token)input.LT(1);
                     match(input,23,FOLLOW_23_in_value117); if (failed) return retval;
@@ -297,7 +297,7 @@ public class JSONParser extends Parser {
     };
 
     // $ANTLR start string
-    // /development/JSON Parser/grammar/JSON.g:32:1: string : String -> ^( STRING String ) ;
+    // /development/antlr/JSON Parser/grammar/JSON.g:32:1: string : String -> ^( STRING String ) ;
     public final string_return string() throws RecognitionException {
         string_return retval = new string_return();
         retval.start = input.LT(1);
@@ -310,8 +310,8 @@ public class JSONParser extends Parser {
         RewriteRuleTokenStream stream_String=new RewriteRuleTokenStream(adaptor,"token String");
 
         try {
-            // /development/JSON Parser/grammar/JSON.g:32:11: ( String -> ^( STRING String ) )
-            // /development/JSON Parser/grammar/JSON.g:32:11: String
+            // /development/antlr/JSON Parser/grammar/JSON.g:32:11: ( String -> ^( STRING String ) )
+            // /development/antlr/JSON Parser/grammar/JSON.g:32:11: String
             {
             String8=(Token)input.LT(1);
             match(input,String,FOLLOW_String_in_string132); if (failed) return retval;
@@ -331,7 +331,7 @@ public class JSONParser extends Parser {
             root_0 = (Object)adaptor.nil();
             // 33:4: -> ^( STRING String )
             {
-                // /development/JSON Parser/grammar/JSON.g:33:7: ^( STRING String )
+                // /development/antlr/JSON Parser/grammar/JSON.g:33:7: ^( STRING String )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(adaptor.create(STRING, "STRING"), root_1);
@@ -370,7 +370,7 @@ public class JSONParser extends Parser {
     };
 
     // $ANTLR start number
-    // /development/JSON Parser/grammar/JSON.g:36:1: number : Number ( Exponent )? -> ^( NUMBER Number ( Exponent )? ) ;
+    // /development/antlr/JSON Parser/grammar/JSON.g:36:1: number : Number ( Exponent )? -> ^( NUMBER Number ( Exponent )? ) ;
     public final number_return number() throws RecognitionException {
         number_return retval = new number_return();
         retval.start = input.LT(1);
@@ -386,14 +386,14 @@ public class JSONParser extends Parser {
         RewriteRuleTokenStream stream_Number=new RewriteRuleTokenStream(adaptor,"token Number");
 
         try {
-            // /development/JSON Parser/grammar/JSON.g:36:10: ( Number ( Exponent )? -> ^( NUMBER Number ( Exponent )? ) )
-            // /development/JSON Parser/grammar/JSON.g:36:10: Number ( Exponent )?
+            // /development/antlr/JSON Parser/grammar/JSON.g:36:10: ( Number ( Exponent )? -> ^( NUMBER Number ( Exponent )? ) )
+            // /development/antlr/JSON Parser/grammar/JSON.g:36:10: Number ( Exponent )?
             {
             Number9=(Token)input.LT(1);
             match(input,Number,FOLLOW_Number_in_number153); if (failed) return retval;
             if ( backtracking==0 ) stream_Number.add(Number9);
 
-            // /development/JSON Parser/grammar/JSON.g:36:17: ( Exponent )?
+            // /development/antlr/JSON Parser/grammar/JSON.g:36:17: ( Exponent )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -402,7 +402,7 @@ public class JSONParser extends Parser {
             }
             switch (alt2) {
                 case 1 :
-                    // /development/JSON Parser/grammar/JSON.g:36:17: Exponent
+                    // /development/antlr/JSON Parser/grammar/JSON.g:36:17: Exponent
                     {
                     Exponent10=(Token)input.LT(1);
                     match(input,Exponent,FOLLOW_Exponent_in_number155); if (failed) return retval;
@@ -416,7 +416,7 @@ public class JSONParser extends Parser {
 
 
             // AST REWRITE
-            // elements: Exponent, Number
+            // elements: Number, Exponent
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -428,13 +428,13 @@ public class JSONParser extends Parser {
             root_0 = (Object)adaptor.nil();
             // 37:4: -> ^( NUMBER Number ( Exponent )? )
             {
-                // /development/JSON Parser/grammar/JSON.g:37:7: ^( NUMBER Number ( Exponent )? )
+                // /development/antlr/JSON Parser/grammar/JSON.g:37:7: ^( NUMBER Number ( Exponent )? )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(adaptor.create(NUMBER, "NUMBER"), root_1);
 
                 adaptor.addChild(root_1, stream_Number.next());
-                // /development/JSON Parser/grammar/JSON.g:37:23: ( Exponent )?
+                // /development/antlr/JSON Parser/grammar/JSON.g:37:23: ( Exponent )?
                 if ( stream_Exponent.hasNext() ) {
                     adaptor.addChild(root_1, stream_Exponent.next());
 
@@ -473,7 +473,7 @@ public class JSONParser extends Parser {
     };
 
     // $ANTLR start object
-    // /development/JSON Parser/grammar/JSON.g:40:1: object : '{' members '}' -> ^( OBJECT members ) ;
+    // /development/antlr/JSON Parser/grammar/JSON.g:40:1: object : '{' members '}' -> ^( OBJECT members ) ;
     public final object_return object() throws RecognitionException {
         object_return retval = new object_return();
         retval.start = input.LT(1);
@@ -491,8 +491,8 @@ public class JSONParser extends Parser {
         RewriteRuleTokenStream stream_25=new RewriteRuleTokenStream(adaptor,"token 25");
         RewriteRuleSubtreeStream stream_members=new RewriteRuleSubtreeStream(adaptor,"rule members");
         try {
-            // /development/JSON Parser/grammar/JSON.g:40:10: ( '{' members '}' -> ^( OBJECT members ) )
-            // /development/JSON Parser/grammar/JSON.g:40:10: '{' members '}'
+            // /development/antlr/JSON Parser/grammar/JSON.g:40:10: ( '{' members '}' -> ^( OBJECT members ) )
+            // /development/antlr/JSON Parser/grammar/JSON.g:40:10: '{' members '}'
             {
             char_literal11=(Token)input.LT(1);
             match(input,24,FOLLOW_24_in_object181); if (failed) return retval;
@@ -521,7 +521,7 @@ public class JSONParser extends Parser {
             root_0 = (Object)adaptor.nil();
             // 41:4: -> ^( OBJECT members )
             {
-                // /development/JSON Parser/grammar/JSON.g:41:7: ^( OBJECT members )
+                // /development/antlr/JSON Parser/grammar/JSON.g:41:7: ^( OBJECT members )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(adaptor.create(OBJECT, "OBJECT"), root_1);
@@ -560,7 +560,7 @@ public class JSONParser extends Parser {
     };
 
     // $ANTLR start array
-    // /development/JSON Parser/grammar/JSON.g:44:1: array : '[' elements ']' -> ^( ARRAY elements ) ;
+    // /development/antlr/JSON Parser/grammar/JSON.g:44:1: array : '[' elements ']' -> ^( ARRAY elements ) ;
     public final array_return array() throws RecognitionException {
         array_return retval = new array_return();
         retval.start = input.LT(1);
@@ -578,8 +578,8 @@ public class JSONParser extends Parser {
         RewriteRuleTokenStream stream_27=new RewriteRuleTokenStream(adaptor,"token 27");
         RewriteRuleSubtreeStream stream_elements=new RewriteRuleSubtreeStream(adaptor,"rule elements");
         try {
-            // /development/JSON Parser/grammar/JSON.g:44:9: ( '[' elements ']' -> ^( ARRAY elements ) )
-            // /development/JSON Parser/grammar/JSON.g:44:9: '[' elements ']'
+            // /development/antlr/JSON Parser/grammar/JSON.g:44:9: ( '[' elements ']' -> ^( ARRAY elements ) )
+            // /development/antlr/JSON Parser/grammar/JSON.g:44:9: '[' elements ']'
             {
             char_literal14=(Token)input.LT(1);
             match(input,26,FOLLOW_26_in_array208); if (failed) return retval;
@@ -608,7 +608,7 @@ public class JSONParser extends Parser {
             root_0 = (Object)adaptor.nil();
             // 45:4: -> ^( ARRAY elements )
             {
-                // /development/JSON Parser/grammar/JSON.g:45:7: ^( ARRAY elements )
+                // /development/antlr/JSON Parser/grammar/JSON.g:45:7: ^( ARRAY elements )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(adaptor.create(ARRAY, "ARRAY"), root_1);
@@ -647,7 +647,7 @@ public class JSONParser extends Parser {
     };
 
     // $ANTLR start elements
-    // /development/JSON Parser/grammar/JSON.g:48:1: elements : value ( ( COMMA value )+ | ) ;
+    // /development/antlr/JSON Parser/grammar/JSON.g:48:1: elements : ( ( value COMMA )=> value ( COMMA value )+ | value );
     public final elements_return elements() throws RecognitionException {
         elements_return retval = new elements_return();
         retval.start = input.LT(1);
@@ -659,42 +659,207 @@ public class JSONParser extends Parser {
 
         value_return value19 = null;
 
+        value_return value20 = null;
+
 
         Object COMMA18_tree=null;
 
         try {
-            // /development/JSON Parser/grammar/JSON.g:48:11: ( value ( ( COMMA value )+ | ) )
-            // /development/JSON Parser/grammar/JSON.g:48:11: value ( ( COMMA value )+ | )
-            {
-            root_0 = (Object)adaptor.nil();
-
-            pushFollow(FOLLOW_value_in_elements232);
-            value17=value();
-            _fsp--;
-            if (failed) return retval;
-            if ( backtracking==0 ) adaptor.addChild(root_0, value17.getTree());
-            // /development/JSON Parser/grammar/JSON.g:49:9: ( ( COMMA value )+ | )
+            // /development/antlr/JSON Parser/grammar/JSON.g:48:10: ( ( value COMMA )=> value ( COMMA value )+ | value )
             int alt4=2;
-            int LA4_0 = input.LA(1);
+            switch ( input.LA(1) ) {
+            case String:
+                {
+                int LA4_1 = input.LA(2);
 
-            if ( (LA4_0==COMMA) ) {
-                alt4=1;
-            }
-            else if ( (LA4_0==27) ) {
-                alt4=2;
-            }
-            else {
+                if ( (LA4_1==COMMA) && (synpred1())) {
+                    alt4=1;
+                }
+                else if ( (LA4_1==27) ) {
+                    alt4=2;
+                }
+                else {
+                    if (backtracking>0) {failed=true; return retval;}
+                    NoViableAltException nvae =
+                        new NoViableAltException("48:1: elements : ( ( value COMMA )=> value ( COMMA value )+ | value );", 4, 1, input);
+
+                    throw nvae;
+                }
+                }
+                break;
+            case Number:
+                {
+                int LA4_2 = input.LA(2);
+
+                if ( (LA4_2==Exponent) ) {
+                    int LA4_10 = input.LA(3);
+
+                    if ( (LA4_10==27) ) {
+                        alt4=2;
+                    }
+                    else if ( (LA4_10==COMMA) && (synpred1())) {
+                        alt4=1;
+                    }
+                    else {
+                        if (backtracking>0) {failed=true; return retval;}
+                        NoViableAltException nvae =
+                            new NoViableAltException("48:1: elements : ( ( value COMMA )=> value ( COMMA value )+ | value );", 4, 10, input);
+
+                        throw nvae;
+                    }
+                }
+                else if ( (LA4_2==27) ) {
+                    alt4=2;
+                }
+                else if ( (LA4_2==COMMA) && (synpred1())) {
+                    alt4=1;
+                }
+                else {
+                    if (backtracking>0) {failed=true; return retval;}
+                    NoViableAltException nvae =
+                        new NoViableAltException("48:1: elements : ( ( value COMMA )=> value ( COMMA value )+ | value );", 4, 2, input);
+
+                    throw nvae;
+                }
+                }
+                break;
+            case 24:
+                {
+                int LA4_3 = input.LA(2);
+
+                if ( (LA4_3==String) ) {
+                    int LA4_11 = input.LA(3);
+
+                    if ( (LA4_11==28) ) {
+                        int LA4_12 = input.LA(4);
+
+                        if ( (synpred1()) ) {
+                            alt4=1;
+                        }
+                        else if ( (true) ) {
+                            alt4=2;
+                        }
+                        else {
+                            if (backtracking>0) {failed=true; return retval;}
+                            NoViableAltException nvae =
+                                new NoViableAltException("48:1: elements : ( ( value COMMA )=> value ( COMMA value )+ | value );", 4, 12, input);
+
+                            throw nvae;
+                        }
+                    }
+                    else {
+                        if (backtracking>0) {failed=true; return retval;}
+                        NoViableAltException nvae =
+                            new NoViableAltException("48:1: elements : ( ( value COMMA )=> value ( COMMA value )+ | value );", 4, 11, input);
+
+                        throw nvae;
+                    }
+                }
+                else {
+                    if (backtracking>0) {failed=true; return retval;}
+                    NoViableAltException nvae =
+                        new NoViableAltException("48:1: elements : ( ( value COMMA )=> value ( COMMA value )+ | value );", 4, 3, input);
+
+                    throw nvae;
+                }
+                }
+                break;
+            case 26:
+                {
+                int LA4_4 = input.LA(2);
+
+                if ( (synpred1()) ) {
+                    alt4=1;
+                }
+                else if ( (true) ) {
+                    alt4=2;
+                }
+                else {
+                    if (backtracking>0) {failed=true; return retval;}
+                    NoViableAltException nvae =
+                        new NoViableAltException("48:1: elements : ( ( value COMMA )=> value ( COMMA value )+ | value );", 4, 4, input);
+
+                    throw nvae;
+                }
+                }
+                break;
+            case 21:
+                {
+                int LA4_5 = input.LA(2);
+
+                if ( (LA4_5==27) ) {
+                    alt4=2;
+                }
+                else if ( (LA4_5==COMMA) && (synpred1())) {
+                    alt4=1;
+                }
+                else {
+                    if (backtracking>0) {failed=true; return retval;}
+                    NoViableAltException nvae =
+                        new NoViableAltException("48:1: elements : ( ( value COMMA )=> value ( COMMA value )+ | value );", 4, 5, input);
+
+                    throw nvae;
+                }
+                }
+                break;
+            case 22:
+                {
+                int LA4_6 = input.LA(2);
+
+                if ( (LA4_6==COMMA) && (synpred1())) {
+                    alt4=1;
+                }
+                else if ( (LA4_6==27) ) {
+                    alt4=2;
+                }
+                else {
+                    if (backtracking>0) {failed=true; return retval;}
+                    NoViableAltException nvae =
+                        new NoViableAltException("48:1: elements : ( ( value COMMA )=> value ( COMMA value )+ | value );", 4, 6, input);
+
+                    throw nvae;
+                }
+                }
+                break;
+            case 23:
+                {
+                int LA4_7 = input.LA(2);
+
+                if ( (LA4_7==27) ) {
+                    alt4=2;
+                }
+                else if ( (LA4_7==COMMA) && (synpred1())) {
+                    alt4=1;
+                }
+                else {
+                    if (backtracking>0) {failed=true; return retval;}
+                    NoViableAltException nvae =
+                        new NoViableAltException("48:1: elements : ( ( value COMMA )=> value ( COMMA value )+ | value );", 4, 7, input);
+
+                    throw nvae;
+                }
+                }
+                break;
+            default:
                 if (backtracking>0) {failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("49:9: ( ( COMMA value )+ | )", 4, 0, input);
+                    new NoViableAltException("48:1: elements : ( ( value COMMA )=> value ( COMMA value )+ | value );", 4, 0, input);
 
                 throw nvae;
             }
+
             switch (alt4) {
                 case 1 :
-                    // /development/JSON Parser/grammar/JSON.g:50:11: ( COMMA value )+
+                    // /development/antlr/JSON Parser/grammar/JSON.g:48:10: ( value COMMA )=> value ( COMMA value )+
                     {
-                    // /development/JSON Parser/grammar/JSON.g:50:11: ( COMMA value )+
+                    root_0 = (Object)adaptor.nil();
+
+                    pushFollow(FOLLOW_value_in_elements239);
+                    value17=value();
+                    _fsp--;
+                    if (failed) return retval;
+                    if ( backtracking==0 ) adaptor.addChild(root_0, value17.getTree());
+                    // /development/antlr/JSON Parser/grammar/JSON.g:48:33: ( COMMA value )+
                     int cnt3=0;
                     loop3:
                     do {
@@ -708,11 +873,11 @@ public class JSONParser extends Parser {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // /development/JSON Parser/grammar/JSON.g:50:12: COMMA value
+                    	    // /development/antlr/JSON Parser/grammar/JSON.g:48:34: COMMA value
                     	    {
                     	    COMMA18=(Token)input.LT(1);
-                    	    match(input,COMMA,FOLLOW_COMMA_in_elements256); if (failed) return retval;
-                    	    pushFollow(FOLLOW_value_in_elements259);
+                    	    match(input,COMMA,FOLLOW_COMMA_in_elements242); if (failed) return retval;
+                    	    pushFollow(FOLLOW_value_in_elements245);
                     	    value19=value();
                     	    _fsp--;
                     	    if (failed) return retval;
@@ -735,16 +900,20 @@ public class JSONParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /development/JSON Parser/grammar/JSON.g:52:9: 
+                    // /development/antlr/JSON Parser/grammar/JSON.g:49:4: value
                     {
+                    root_0 = (Object)adaptor.nil();
+
+                    pushFollow(FOLLOW_value_in_elements252);
+                    value20=value();
+                    _fsp--;
+                    if (failed) return retval;
+                    if ( backtracking==0 ) adaptor.addChild(root_0, value20.getTree());
+
                     }
                     break;
 
             }
-
-
-            }
-
             retval.stop = input.LT(-1);
 
             if ( backtracking==0 ) {
@@ -768,25 +937,25 @@ public class JSONParser extends Parser {
     };
 
     // $ANTLR start members
-    // /development/JSON Parser/grammar/JSON.g:55:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );
+    // /development/antlr/JSON Parser/grammar/JSON.g:52:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );
     public final members_return members() throws RecognitionException {
         members_return retval = new members_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token COMMA21=null;
-        pair_return pair20 = null;
-
-        pair_return pair22 = null;
+        Token COMMA22=null;
+        pair_return pair21 = null;
 
         pair_return pair23 = null;
 
+        pair_return pair24 = null;
 
-        Object COMMA21_tree=null;
+
+        Object COMMA22_tree=null;
 
         try {
-            // /development/JSON Parser/grammar/JSON.g:55:10: ( ( pair COMMA )=> pair ( COMMA pair )+ | pair )
+            // /development/antlr/JSON Parser/grammar/JSON.g:52:10: ( ( pair COMMA )=> pair ( COMMA pair )+ | pair )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -799,16 +968,16 @@ public class JSONParser extends Parser {
                         {
                         int LA6_3 = input.LA(4);
 
-                        if ( (LA6_3==COMMA) && (synpred1())) {
-                            alt6=1;
-                        }
-                        else if ( (LA6_3==25) ) {
+                        if ( (LA6_3==25) ) {
                             alt6=2;
+                        }
+                        else if ( (LA6_3==COMMA) && (synpred2())) {
+                            alt6=1;
                         }
                         else {
                             if (backtracking>0) {failed=true; return retval;}
                             NoViableAltException nvae =
-                                new NoViableAltException("55:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 3, input);
+                                new NoViableAltException("52:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 3, input);
 
                             throw nvae;
                         }
@@ -824,13 +993,13 @@ public class JSONParser extends Parser {
                             if ( (LA6_12==25) ) {
                                 alt6=2;
                             }
-                            else if ( (LA6_12==COMMA) && (synpred1())) {
+                            else if ( (LA6_12==COMMA) && (synpred2())) {
                                 alt6=1;
                             }
                             else {
                                 if (backtracking>0) {failed=true; return retval;}
                                 NoViableAltException nvae =
-                                    new NoViableAltException("55:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 12, input);
+                                    new NoViableAltException("52:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 12, input);
 
                                 throw nvae;
                             }
@@ -838,13 +1007,13 @@ public class JSONParser extends Parser {
                         else if ( (LA6_4==25) ) {
                             alt6=2;
                         }
-                        else if ( (LA6_4==COMMA) && (synpred1())) {
+                        else if ( (LA6_4==COMMA) && (synpred2())) {
                             alt6=1;
                         }
                         else {
                             if (backtracking>0) {failed=true; return retval;}
                             NoViableAltException nvae =
-                                new NoViableAltException("55:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 4, input);
+                                new NoViableAltException("52:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 4, input);
 
                             throw nvae;
                         }
@@ -854,7 +1023,7 @@ public class JSONParser extends Parser {
                         {
                         int LA6_5 = input.LA(4);
 
-                        if ( (synpred1()) ) {
+                        if ( (synpred2()) ) {
                             alt6=1;
                         }
                         else if ( (true) ) {
@@ -863,7 +1032,7 @@ public class JSONParser extends Parser {
                         else {
                             if (backtracking>0) {failed=true; return retval;}
                             NoViableAltException nvae =
-                                new NoViableAltException("55:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 5, input);
+                                new NoViableAltException("52:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 5, input);
 
                             throw nvae;
                         }
@@ -873,7 +1042,7 @@ public class JSONParser extends Parser {
                         {
                         int LA6_6 = input.LA(4);
 
-                        if ( (synpred1()) ) {
+                        if ( (synpred2()) ) {
                             alt6=1;
                         }
                         else if ( (true) ) {
@@ -882,7 +1051,7 @@ public class JSONParser extends Parser {
                         else {
                             if (backtracking>0) {failed=true; return retval;}
                             NoViableAltException nvae =
-                                new NoViableAltException("55:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 6, input);
+                                new NoViableAltException("52:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 6, input);
 
                             throw nvae;
                         }
@@ -892,7 +1061,7 @@ public class JSONParser extends Parser {
                         {
                         int LA6_7 = input.LA(4);
 
-                        if ( (LA6_7==COMMA) && (synpred1())) {
+                        if ( (LA6_7==COMMA) && (synpred2())) {
                             alt6=1;
                         }
                         else if ( (LA6_7==25) ) {
@@ -901,7 +1070,7 @@ public class JSONParser extends Parser {
                         else {
                             if (backtracking>0) {failed=true; return retval;}
                             NoViableAltException nvae =
-                                new NoViableAltException("55:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 7, input);
+                                new NoViableAltException("52:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 7, input);
 
                             throw nvae;
                         }
@@ -911,7 +1080,7 @@ public class JSONParser extends Parser {
                         {
                         int LA6_8 = input.LA(4);
 
-                        if ( (LA6_8==COMMA) && (synpred1())) {
+                        if ( (LA6_8==COMMA) && (synpred2())) {
                             alt6=1;
                         }
                         else if ( (LA6_8==25) ) {
@@ -920,7 +1089,7 @@ public class JSONParser extends Parser {
                         else {
                             if (backtracking>0) {failed=true; return retval;}
                             NoViableAltException nvae =
-                                new NoViableAltException("55:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 8, input);
+                                new NoViableAltException("52:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 8, input);
 
                             throw nvae;
                         }
@@ -930,16 +1099,16 @@ public class JSONParser extends Parser {
                         {
                         int LA6_9 = input.LA(4);
 
-                        if ( (LA6_9==COMMA) && (synpred1())) {
-                            alt6=1;
-                        }
-                        else if ( (LA6_9==25) ) {
+                        if ( (LA6_9==25) ) {
                             alt6=2;
+                        }
+                        else if ( (LA6_9==COMMA) && (synpred2())) {
+                            alt6=1;
                         }
                         else {
                             if (backtracking>0) {failed=true; return retval;}
                             NoViableAltException nvae =
-                                new NoViableAltException("55:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 9, input);
+                                new NoViableAltException("52:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 9, input);
 
                             throw nvae;
                         }
@@ -948,7 +1117,7 @@ public class JSONParser extends Parser {
                     default:
                         if (backtracking>0) {failed=true; return retval;}
                         NoViableAltException nvae =
-                            new NoViableAltException("55:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 2, input);
+                            new NoViableAltException("52:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 2, input);
 
                         throw nvae;
                     }
@@ -957,7 +1126,7 @@ public class JSONParser extends Parser {
                 else {
                     if (backtracking>0) {failed=true; return retval;}
                     NoViableAltException nvae =
-                        new NoViableAltException("55:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 1, input);
+                        new NoViableAltException("52:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 1, input);
 
                     throw nvae;
                 }
@@ -965,22 +1134,22 @@ public class JSONParser extends Parser {
             else {
                 if (backtracking>0) {failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("55:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 0, input);
+                    new NoViableAltException("52:1: members : ( ( pair COMMA )=> pair ( COMMA pair )+ | pair );", 6, 0, input);
 
                 throw nvae;
             }
             switch (alt6) {
                 case 1 :
-                    // /development/JSON Parser/grammar/JSON.g:55:10: ( pair COMMA )=> pair ( COMMA pair )+
+                    // /development/antlr/JSON Parser/grammar/JSON.g:52:10: ( pair COMMA )=> pair ( COMMA pair )+
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_pair_in_members302);
-                    pair20=pair();
+                    pushFollow(FOLLOW_pair_in_members270);
+                    pair21=pair();
                     _fsp--;
                     if (failed) return retval;
-                    if ( backtracking==0 ) adaptor.addChild(root_0, pair20.getTree());
-                    // /development/JSON Parser/grammar/JSON.g:55:31: ( COMMA pair )+
+                    if ( backtracking==0 ) adaptor.addChild(root_0, pair21.getTree());
+                    // /development/antlr/JSON Parser/grammar/JSON.g:52:31: ( COMMA pair )+
                     int cnt5=0;
                     loop5:
                     do {
@@ -994,15 +1163,15 @@ public class JSONParser extends Parser {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // /development/JSON Parser/grammar/JSON.g:55:32: COMMA pair
+                    	    // /development/antlr/JSON Parser/grammar/JSON.g:52:32: COMMA pair
                     	    {
-                    	    COMMA21=(Token)input.LT(1);
-                    	    match(input,COMMA,FOLLOW_COMMA_in_members305); if (failed) return retval;
-                    	    pushFollow(FOLLOW_pair_in_members308);
-                    	    pair22=pair();
+                    	    COMMA22=(Token)input.LT(1);
+                    	    match(input,COMMA,FOLLOW_COMMA_in_members273); if (failed) return retval;
+                    	    pushFollow(FOLLOW_pair_in_members276);
+                    	    pair23=pair();
                     	    _fsp--;
                     	    if (failed) return retval;
-                    	    if ( backtracking==0 ) adaptor.addChild(root_0, pair22.getTree());
+                    	    if ( backtracking==0 ) adaptor.addChild(root_0, pair23.getTree());
 
                     	    }
                     	    break;
@@ -1021,15 +1190,15 @@ public class JSONParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /development/JSON Parser/grammar/JSON.g:56:4: pair
+                    // /development/antlr/JSON Parser/grammar/JSON.g:53:4: pair
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_pair_in_members315);
-                    pair23=pair();
+                    pushFollow(FOLLOW_pair_in_members283);
+                    pair24=pair();
                     _fsp--;
                     if (failed) return retval;
-                    if ( backtracking==0 ) adaptor.addChild(root_0, pair23.getTree());
+                    if ( backtracking==0 ) adaptor.addChild(root_0, pair24.getTree());
 
                     }
                     break;
@@ -1058,40 +1227,40 @@ public class JSONParser extends Parser {
     };
 
     // $ANTLR start pair
-    // /development/JSON Parser/grammar/JSON.g:59:1: pair : String ':' value -> ^( FIELD String value ) ;
+    // /development/antlr/JSON Parser/grammar/JSON.g:56:1: pair : String ':' value -> ^( FIELD String value ) ;
     public final pair_return pair() throws RecognitionException {
         pair_return retval = new pair_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token String24=null;
-        Token char_literal25=null;
-        value_return value26 = null;
+        Token String25=null;
+        Token char_literal26=null;
+        value_return value27 = null;
 
 
-        Object String24_tree=null;
-        Object char_literal25_tree=null;
+        Object String25_tree=null;
+        Object char_literal26_tree=null;
         RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
         RewriteRuleTokenStream stream_String=new RewriteRuleTokenStream(adaptor,"token String");
         RewriteRuleSubtreeStream stream_value=new RewriteRuleSubtreeStream(adaptor,"rule value");
         try {
-            // /development/JSON Parser/grammar/JSON.g:59:8: ( String ':' value -> ^( FIELD String value ) )
-            // /development/JSON Parser/grammar/JSON.g:59:8: String ':' value
+            // /development/antlr/JSON Parser/grammar/JSON.g:56:8: ( String ':' value -> ^( FIELD String value ) )
+            // /development/antlr/JSON Parser/grammar/JSON.g:56:8: String ':' value
             {
-            String24=(Token)input.LT(1);
-            match(input,String,FOLLOW_String_in_pair327); if (failed) return retval;
-            if ( backtracking==0 ) stream_String.add(String24);
+            String25=(Token)input.LT(1);
+            match(input,String,FOLLOW_String_in_pair295); if (failed) return retval;
+            if ( backtracking==0 ) stream_String.add(String25);
 
-            char_literal25=(Token)input.LT(1);
-            match(input,28,FOLLOW_28_in_pair329); if (failed) return retval;
-            if ( backtracking==0 ) stream_28.add(char_literal25);
+            char_literal26=(Token)input.LT(1);
+            match(input,28,FOLLOW_28_in_pair297); if (failed) return retval;
+            if ( backtracking==0 ) stream_28.add(char_literal26);
 
-            pushFollow(FOLLOW_value_in_pair331);
-            value26=value();
+            pushFollow(FOLLOW_value_in_pair299);
+            value27=value();
             _fsp--;
             if (failed) return retval;
-            if ( backtracking==0 ) stream_value.add(value26.getTree());
+            if ( backtracking==0 ) stream_value.add(value27.getTree());
 
             // AST REWRITE
             // elements: value, String
@@ -1104,9 +1273,9 @@ public class JSONParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"token retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 60:4: -> ^( FIELD String value )
+            // 57:4: -> ^( FIELD String value )
             {
-                // /development/JSON Parser/grammar/JSON.g:60:7: ^( FIELD String value )
+                // /development/antlr/JSON Parser/grammar/JSON.g:57:7: ^( FIELD String value )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(adaptor.create(FIELD, "FIELD"), root_1);
@@ -1142,19 +1311,48 @@ public class JSONParser extends Parser {
 
     // $ANTLR start synpred1
     public final void synpred1_fragment() throws RecognitionException {   
-        // /development/JSON Parser/grammar/JSON.g:55:10: ( pair COMMA )
-        // /development/JSON Parser/grammar/JSON.g:55:11: pair COMMA
+        // /development/antlr/JSON Parser/grammar/JSON.g:48:10: ( value COMMA )
+        // /development/antlr/JSON Parser/grammar/JSON.g:48:11: value COMMA
         {
-        pushFollow(FOLLOW_pair_in_synpred1295);
-        pair();
+        pushFollow(FOLLOW_value_in_synpred1232);
+        value();
         _fsp--;
         if (failed) return ;
-        match(input,COMMA,FOLLOW_COMMA_in_synpred1297); if (failed) return ;
+        match(input,COMMA,FOLLOW_COMMA_in_synpred1234); if (failed) return ;
 
         }
     }
     // $ANTLR end synpred1
 
+    // $ANTLR start synpred2
+    public final void synpred2_fragment() throws RecognitionException {   
+        // /development/antlr/JSON Parser/grammar/JSON.g:52:10: ( pair COMMA )
+        // /development/antlr/JSON Parser/grammar/JSON.g:52:11: pair COMMA
+        {
+        pushFollow(FOLLOW_pair_in_synpred2263);
+        pair();
+        _fsp--;
+        if (failed) return ;
+        match(input,COMMA,FOLLOW_COMMA_in_synpred2265); if (failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred2
+
+    public final boolean synpred2() {
+        backtracking++;
+        int start = input.mark();
+        try {
+            synpred2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !failed;
+        input.rewind(start);
+        backtracking--;
+        failed=false;
+        return success;
+    }
     public final boolean synpred1() {
         backtracking++;
         int start = input.mark();
@@ -1189,17 +1387,20 @@ public class JSONParser extends Parser {
     public static final BitSet FOLLOW_26_in_array208 = new BitSet(new long[]{0x0000000005E06000L});
     public static final BitSet FOLLOW_elements_in_array210 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_27_in_array212 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_value_in_elements232 = new BitSet(new long[]{0x0000000000000202L});
-    public static final BitSet FOLLOW_COMMA_in_elements256 = new BitSet(new long[]{0x0000000005E06000L});
-    public static final BitSet FOLLOW_value_in_elements259 = new BitSet(new long[]{0x0000000000000202L});
-    public static final BitSet FOLLOW_pair_in_members302 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_COMMA_in_members305 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_pair_in_members308 = new BitSet(new long[]{0x0000000000000202L});
-    public static final BitSet FOLLOW_pair_in_members315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_String_in_pair327 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_pair329 = new BitSet(new long[]{0x0000000005E06000L});
-    public static final BitSet FOLLOW_value_in_pair331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_pair_in_synpred1295 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_COMMA_in_synpred1297 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_value_in_elements239 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_COMMA_in_elements242 = new BitSet(new long[]{0x0000000005E06000L});
+    public static final BitSet FOLLOW_value_in_elements245 = new BitSet(new long[]{0x0000000000000202L});
+    public static final BitSet FOLLOW_value_in_elements252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_pair_in_members270 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_COMMA_in_members273 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_pair_in_members276 = new BitSet(new long[]{0x0000000000000202L});
+    public static final BitSet FOLLOW_pair_in_members283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_String_in_pair295 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_pair297 = new BitSet(new long[]{0x0000000005E06000L});
+    public static final BitSet FOLLOW_value_in_pair299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_value_in_synpred1232 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_COMMA_in_synpred1234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_pair_in_synpred2263 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_COMMA_in_synpred2265 = new BitSet(new long[]{0x0000000000000002L});
 
 }

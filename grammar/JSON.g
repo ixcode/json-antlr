@@ -45,11 +45,8 @@ array	: '[' elements ']'
 	  -> ^(ARRAY elements)
 	;
 
-elements: value 
-        (
-          (COMMA! value)+
-          | // no additional elements
-        )
+elements:(value COMMA) => value (COMMA! value)+
+	| value
 	;
 	
 members	:(pair COMMA) => pair (COMMA! pair)+
