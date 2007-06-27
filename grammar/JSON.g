@@ -45,12 +45,10 @@ array	: '[' elements ']'
 	  -> ^(ARRAY elements)
 	;
 
-elements:(value COMMA) => value (COMMA! value)+
-	| value
+elements: value (COMMA! value)*
 	;
 	
-members	:(pair COMMA) => pair (COMMA! pair)+
-	| pair
+members	: pair (COMMA! pair)*
 	;
 	 
 pair	: String ':' value 

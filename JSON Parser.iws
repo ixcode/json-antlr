@@ -17,10 +17,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSONLexer.java" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSONLexer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSONParser.java" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSONParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JSON Parser.iws" afterPath="$PROJECT_DIR$/JSON Parser.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/JSON.g" afterPath="$PROJECT_DIR$/grammar/JSON.g" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JSON Parser.iws" afterPath="$PROJECT_DIR$/JSON Parser.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/nextquestion/json/JSONLexer.java" afterPath="$PROJECT_DIR$/src/net/nextquestion/json/JSONLexer.java" />
     </list>
   </component>
   <component name="ChangeListSynchronizer" />
@@ -148,7 +148,7 @@
       <file leaf-file-name="JSONTreeParserTests.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="555" selection-end="884" vertical-scroll-proportion="0.3783784">
+            <state line="32" column="0" selection-start="555" selection-end="884" vertical-scroll-proportion="0.040948275">
               <folding />
             </state>
           </provider>
@@ -392,13 +392,6 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <module name="" />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -451,6 +444,13 @@
       <option name="PROPERTIES_FILE" />
       <properties />
     </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="false" name="JSON Tests" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
       <module name="JSON Parser" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -487,9 +487,6 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-  </component>
-  <component name="SQLPlugin.ProjectConfiguration">
-    <queries />
   </component>
   <component name="ScopeViewComponent">
     <subPane subId="Project">
@@ -551,10 +548,6 @@
     <option name="MERGE_DRY_RUN" value="false" />
     <configuration useDefault="true">/Users/rdclark/.subversion</configuration>
   </component>
-  <component name="Talios.JiraConfigurationComponent" enableIssueTracking="false" autoRefresh="false" useExternalBrowser="false" refreshTimeout="0" annotateissues="false">
-    <servers />
-    <columns />
-  </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
@@ -570,38 +563,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="22" width="1920" height="1174" extended-state="6" />
+    <frame x="2" y="29" width="1440" height="874" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="-1" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="9" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17744522" order="0" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" order="1" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19136691" order="1" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806692" order="10" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
-      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="11" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39948454" order="4" />
+      <window_info id="DBHelper" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
+      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="-1" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
+      <window_info id="DBOutput" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="15" />
+      <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="9" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17769784" order="0" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" order="1" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19136691" order="1" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32860824" order="10" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="11" />
+      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="12" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806692" order="2" />
+      <window_info id="EclipseImporter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32860824" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39948454" order="4" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="14" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
-      <window_info id="DBHelper" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
-      <window_info id="DBOutput" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="15" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="3" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
-      <window_info id="EclipseImporter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
     </layout>
   </component>
   <component name="VCS.FileViewConfiguration">
@@ -719,7 +712,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/net/nextquestion/json/JSONTreeParserTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="555" selection-end="884" vertical-scroll-proportion="0.3783784">
+        <state line="32" column="0" selection-start="555" selection-end="884" vertical-scroll-proportion="0.040948275">
           <folding />
         </state>
       </provider>
