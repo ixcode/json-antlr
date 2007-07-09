@@ -1,4 +1,4 @@
-// $ANTLR 3.0 /development/JSON Parser/grammar/JSONTree.g 2007-06-04 10:28:38
+// $ANTLR 3.0 /development/JSON Parser/grammar/JSONTree.g 2007-07-09 08:53:11
 
 package net.nextquestion.json;
 
@@ -139,7 +139,7 @@ public class JSONTree extends TreeParser {
                 OutputStreamWriter osw = new OutputStreamWriter(baos, "UTF-8");
                 osw.write(charNum);
                 osw.flush();
-                result = baos.toString();
+                result = baos.toString("UTF-8"); // Thanks to Silvester Pozarnik for the tip bout adding "UTF-8" here
             } catch (Exception e) {
                 e.printStackTrace();
                 result = null;
