@@ -32,6 +32,12 @@ public class JSONTreeParserTests extends AbstractJSONTests {
     }
 
     @Test
+    public void testEscapedSolidus() throws IOException, RecognitionException {
+        testViaTreeParser("\"\\/\"", "/");
+    }
+
+
+    @Test
     public void testBooleans() throws IOException, RecognitionException {
         testViaTreeParser("true", Boolean.TRUE);
         testViaTreeParser("false", Boolean.FALSE);

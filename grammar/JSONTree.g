@@ -83,6 +83,10 @@ import java.io.OutputStreamWriter;
                 case '\\':
                     sb.replace(slashIndex, slashIndex + 2, "\\"); // backslash
                     break;
+                    
+                case '/':
+                    sb.replace(slashIndex, slashIndex + 2, "/"); // solidus
+                    break;
 
             }
             startPoint = slashIndex+1;
@@ -109,7 +113,7 @@ import java.io.OutputStreamWriter;
             OutputStreamWriter osw = new OutputStreamWriter(baos, "UTF-8");
             osw.write(charNum);
             osw.flush();
-            result = baos.toString("UTF-8"); // Thanks to Silvester Pozarnik for the tip bout adding "UTF-8" here
+            result = baos.toString("UTF-8"); // Thanks to Silvester Pozarnik for the tip about adding "UTF-8" here
         } catch (Exception e) {
             e.printStackTrace();
             result = null;

@@ -26,6 +26,18 @@ public class JSONParserTests extends AbstractJSONTests {
         testViaStringTree("\"ab\\\\cd\"", "(STRING \"ab\\\\cd\")");
     }
 
+    @Test(expectedExceptions = RecognitionException.class)
+    public void testUnescapedSolidus() throws IOException, RecognitionException {
+        // The solidus "/" must be escaped in JSON. The parser will throw an exception for it.
+        JSONParser parser = createParser("ab/cd");
+        ParserRuleReturnScope result = parser.value();
+    }
+
+    /* Note: We don't test the rest of the escapes here as they're better tested
+       at the tree parser level (after post-processing). The parser simply passes
+       the whole escape sequence to the tree parser for processing.
+     */
+
     @Test
     public void testUnicodeCharacter() throws IOException, RecognitionException {
         testViaStringTree("\"\\u001C\"", "(STRING \"\\u001C\")");
@@ -62,12 +74,11 @@ public class JSONParserTests extends AbstractJSONTests {
         testViaStringTree("123.45E-4", "(NUMBER 123.45 E-4)");
     }
 
-    @Test
+    @Test(expectedExceptions = RecognitionException.class)
     public void testDoubleZero() throws IOException, RecognitionException {
-        JSONParser parser = createParser("00");
-        // TODO signal an invalid item and continue
+        // Leading zeros aren't allowed. The parser now throws an exception in that case
+        JSONParser parser = createParser("007");
         ParserRuleReturnScope result = parser.value();
-//        assert result == null : "Null result expected";
     }
 
     @Test

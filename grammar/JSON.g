@@ -12,11 +12,38 @@ tokens {
 
 @header {
 package net.nextquestion.json;
+
+import java.util.regex.Pattern;
+  
 }
 
 @lexer::header {
 package net.nextquestion.json;
 }
+
+// Optional step: Disable automatic error recovery
+@members { 
+protected void mismatch(IntStream input, int ttype, BitSet follow) 
+throws RecognitionException 
+{ 
+throw new MismatchedTokenException(ttype, input); 
+} 
+public Object recoverFromMismatchedSet(IntStream input, 
+RecognitionException e, 
+BitSet follow) 
+throws RecognitionException 
+{ 
+throw e; 
+} 
+} 
+// Alter code generation so catch-clauses get replace with 
+// this action. 
+@rulecatch { 
+catch (RecognitionException e) { 
+throw e; 
+} 
+} 
+
 
 
 value
@@ -33,7 +60,9 @@ string 	: String
 	  -> ^(STRING String)
 	;
 
-number	: Number Exponent? 
+// If you want to conform to the RFC, use a validating semantic predicate to check the result.
+number	: n=Number {Pattern.matches("(0|(-?[1-9]\\d*))(\\.\\d+)?", n.getText())}? 
+	    Exponent? 
 	  -> ^(NUMBER Number Exponent?)
 	;
 
@@ -57,16 +86,16 @@ pair	: String ':' value
 
 Number	: '-'? Digit+ ( '.' Digit+)?;
 
-Exponent: ('e'|'E') '-'? Digit+;
+Exponent: ('e'|'E') '-'? ('1'..'9') Digit*;
 
 String 	:
-	'"' ( EscapeSequence | ~('\u0000'..'\u001f' | '\\' | '\"' ) )* '"'
+	'"' ( EscapeSequence | ~('\u0000'..'\u001f' | '\\' | '\"' | '/') )* '"'
 	;
 
 WS: (' '|'\n'|'\r'|'\t')+ {$channel=HIDDEN;} ; // ignore whitespace 
 
 fragment EscapeSequence
-    	:   '\\' (UnicodeEscape |'b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
+    	:   '\\' (UnicodeEscape |'b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\'|'\/')
     	;
 
 fragment UnicodeEscape

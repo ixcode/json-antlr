@@ -1,4 +1,4 @@
-// $ANTLR 3.0 /development/JSON Parser/grammar/JSONTree.g 2007-07-09 08:53:11
+// $ANTLR 3.1.2 /development/grammars/json-antlr/grammar/JSONTree.g 2009-05-26 18:53:46
 
 package net.nextquestion.json;
 
@@ -39,13 +39,21 @@ public class JSONTree extends TreeParser {
     public static final int Number=14;
     public static final int TRUE=10;
 
+    // delegates
+    // delegators
+
+
         public JSONTree(TreeNodeStream input) {
-            super(input);
+            this(input, new RecognizerSharedState());
+        }
+        public JSONTree(TreeNodeStream input, RecognizerSharedState state) {
+            super(input, state);
+             
         }
         
 
-    public String[] getTokenNames() { return tokenNames; }
-    public String getGrammarFileName() { return "/development/JSON Parser/grammar/JSONTree.g"; }
+    public String[] getTokenNames() { return JSONTree.tokenNames; }
+    public String getGrammarFileName() { return "/development/grammars/json-antlr/grammar/JSONTree.g"; }
 
 
         private Object extractNumber(CommonTree numberToken, CommonTree exponentToken) {
@@ -113,6 +121,10 @@ public class JSONTree extends TreeParser {
                     case '\\':
                         sb.replace(slashIndex, slashIndex + 2, "\\"); // backslash
                         break;
+                        
+                    case '/':
+                        sb.replace(slashIndex, slashIndex + 2, "/"); // solidus
+                        break;
 
                 }
                 startPoint = slashIndex+1;
@@ -139,7 +151,7 @@ public class JSONTree extends TreeParser {
                 OutputStreamWriter osw = new OutputStreamWriter(baos, "UTF-8");
                 osw.write(charNum);
                 osw.flush();
-                result = baos.toString("UTF-8"); // Thanks to Silvester Pozarnik for the tip bout adding "UTF-8" here
+                result = baos.toString("UTF-8"); // Thanks to Silvester Pozarnik for the tip about adding "UTF-8" here
             } catch (Exception e) {
                 e.printStackTrace();
                 result = null;
@@ -150,8 +162,8 @@ public class JSONTree extends TreeParser {
 
 
 
-    // $ANTLR start value
-    // /development/JSON Parser/grammar/JSONTree.g:122:1: value returns [Object result] : (s= string | n= number | o= object | a= array | TRUE | FALSE | NULL );
+    // $ANTLR start "value"
+    // /development/grammars/json-antlr/grammar/JSONTree.g:126:1: value returns [Object result] : (s= string | n= number | o= object | a= array | TRUE | FALSE | NULL );
     public final Object value() throws RecognitionException {
         Object result = null;
 
@@ -165,7 +177,7 @@ public class JSONTree extends TreeParser {
 
 
         try {
-            // /development/JSON Parser/grammar/JSONTree.g:123:4: (s= string | n= number | o= object | a= array | TRUE | FALSE | NULL )
+            // /development/grammars/json-antlr/grammar/JSONTree.g:127:2: (s= string | n= number | o= object | a= array | TRUE | FALSE | NULL )
             int alt1=7;
             switch ( input.LA(1) ) {
             case STRING:
@@ -205,58 +217,62 @@ public class JSONTree extends TreeParser {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("122:1: value returns [Object result] : (s= string | n= number | o= object | a= array | TRUE | FALSE | NULL );", 1, 0, input);
+                    new NoViableAltException("", 1, 0, input);
 
                 throw nvae;
             }
 
             switch (alt1) {
                 case 1 :
-                    // /development/JSON Parser/grammar/JSONTree.g:123:4: s= string
+                    // /development/grammars/json-antlr/grammar/JSONTree.g:127:4: s= string
                     {
                     pushFollow(FOLLOW_string_in_value50);
                     s=string();
-                    _fsp--;
+
+                    state._fsp--;
 
                      result = s; 
 
                     }
                     break;
                 case 2 :
-                    // /development/JSON Parser/grammar/JSONTree.g:124:4: n= number
+                    // /development/grammars/json-antlr/grammar/JSONTree.g:128:4: n= number
                     {
                     pushFollow(FOLLOW_number_in_value60);
                     n=number();
-                    _fsp--;
+
+                    state._fsp--;
 
                      result = n; 
 
                     }
                     break;
                 case 3 :
-                    // /development/JSON Parser/grammar/JSONTree.g:125:4: o= object
+                    // /development/grammars/json-antlr/grammar/JSONTree.g:129:4: o= object
                     {
                     pushFollow(FOLLOW_object_in_value69);
                     o=object();
-                    _fsp--;
+
+                    state._fsp--;
 
                      result = o; 
 
                     }
                     break;
                 case 4 :
-                    // /development/JSON Parser/grammar/JSONTree.g:126:4: a= array
+                    // /development/grammars/json-antlr/grammar/JSONTree.g:130:4: a= array
                     {
                     pushFollow(FOLLOW_array_in_value78);
                     a=array();
-                    _fsp--;
+
+                    state._fsp--;
 
                      result = a; 
 
                     }
                     break;
                 case 5 :
-                    // /development/JSON Parser/grammar/JSONTree.g:127:4: TRUE
+                    // /development/grammars/json-antlr/grammar/JSONTree.g:131:4: TRUE
                     {
                     match(input,TRUE,FOLLOW_TRUE_in_value85); 
                      result =Boolean.TRUE; 
@@ -264,7 +280,7 @@ public class JSONTree extends TreeParser {
                     }
                     break;
                 case 6 :
-                    // /development/JSON Parser/grammar/JSONTree.g:128:4: FALSE
+                    // /development/grammars/json-antlr/grammar/JSONTree.g:132:4: FALSE
                     {
                     match(input,FALSE,FOLLOW_FALSE_in_value92); 
                     result = Boolean.FALSE; 
@@ -272,7 +288,7 @@ public class JSONTree extends TreeParser {
                     }
                     break;
                 case 7 :
-                    // /development/JSON Parser/grammar/JSONTree.g:129:4: NULL
+                    // /development/grammars/json-antlr/grammar/JSONTree.g:133:4: NULL
                     {
                     match(input,NULL,FOLLOW_NULL_in_value99); 
                     result = null; 
@@ -290,25 +306,24 @@ public class JSONTree extends TreeParser {
         }
         return result;
     }
-    // $ANTLR end value
+    // $ANTLR end "value"
 
 
-    // $ANTLR start string
-    // /development/JSON Parser/grammar/JSONTree.g:132:1: string returns [String result] : ^( STRING String ) ;
+    // $ANTLR start "string"
+    // /development/grammars/json-antlr/grammar/JSONTree.g:136:1: string returns [String result] : ^( STRING String ) ;
     public final String string() throws RecognitionException {
         String result = null;
 
         CommonTree String1=null;
 
         try {
-            // /development/JSON Parser/grammar/JSONTree.g:133:4: ( ^( STRING String ) )
-            // /development/JSON Parser/grammar/JSONTree.g:133:4: ^( STRING String )
+            // /development/grammars/json-antlr/grammar/JSONTree.g:137:2: ( ^( STRING String ) )
+            // /development/grammars/json-antlr/grammar/JSONTree.g:137:4: ^( STRING String )
             {
             match(input,STRING,FOLLOW_STRING_in_string117); 
 
             match(input, Token.DOWN, null); 
-            String1=(CommonTree)input.LT(1);
-            match(input,String,FOLLOW_String_in_string119); 
+            String1=(CommonTree)match(input,String,FOLLOW_String_in_string119); 
 
             match(input, Token.UP, null); 
              result = extractString(String1); 
@@ -324,23 +339,23 @@ public class JSONTree extends TreeParser {
         }
         return result;
     }
-    // $ANTLR end string
+    // $ANTLR end "string"
 
 
-    // $ANTLR start object
-    // /development/JSON Parser/grammar/JSONTree.g:137:1: object returns [Map result] : ^( OBJECT ( pair[$result] )+ ) ;
+    // $ANTLR start "object"
+    // /development/grammars/json-antlr/grammar/JSONTree.g:141:1: object returns [Map result] : ^( OBJECT ( pair[$result] )+ ) ;
     public final Map object() throws RecognitionException {
         Map result = null;
 
          result = new HashMap(); 
         try {
-            // /development/JSON Parser/grammar/JSONTree.g:139:4: ( ^( OBJECT ( pair[$result] )+ ) )
-            // /development/JSON Parser/grammar/JSONTree.g:139:4: ^( OBJECT ( pair[$result] )+ )
+            // /development/grammars/json-antlr/grammar/JSONTree.g:143:2: ( ^( OBJECT ( pair[$result] )+ ) )
+            // /development/grammars/json-antlr/grammar/JSONTree.g:143:4: ^( OBJECT ( pair[$result] )+ )
             {
             match(input,OBJECT,FOLLOW_OBJECT_in_object147); 
 
             match(input, Token.DOWN, null); 
-            // /development/JSON Parser/grammar/JSONTree.g:139:13: ( pair[$result] )+
+            // /development/grammars/json-antlr/grammar/JSONTree.g:143:13: ( pair[$result] )+
             int cnt2=0;
             loop2:
             do {
@@ -354,11 +369,12 @@ public class JSONTree extends TreeParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // /development/JSON Parser/grammar/JSONTree.g:139:13: pair[$result]
+            	    // /development/grammars/json-antlr/grammar/JSONTree.g:143:13: pair[$result]
             	    {
             	    pushFollow(FOLLOW_pair_in_object149);
             	    pair(result);
-            	    _fsp--;
+
+            	    state._fsp--;
 
 
             	    }
@@ -387,11 +403,11 @@ public class JSONTree extends TreeParser {
         }
         return result;
     }
-    // $ANTLR end object
+    // $ANTLR end "object"
 
 
-    // $ANTLR start number
-    // /development/JSON Parser/grammar/JSONTree.g:142:1: number returns [Object result] : ^( NUMBER Number ( Exponent )? ) ;
+    // $ANTLR start "number"
+    // /development/grammars/json-antlr/grammar/JSONTree.g:146:1: number returns [Object result] : ^( NUMBER Number ( Exponent )? ) ;
     public final Object number() throws RecognitionException {
         Object result = null;
 
@@ -399,15 +415,14 @@ public class JSONTree extends TreeParser {
         CommonTree Exponent3=null;
 
         try {
-            // /development/JSON Parser/grammar/JSONTree.g:143:4: ( ^( NUMBER Number ( Exponent )? ) )
-            // /development/JSON Parser/grammar/JSONTree.g:143:4: ^( NUMBER Number ( Exponent )? )
+            // /development/grammars/json-antlr/grammar/JSONTree.g:147:2: ( ^( NUMBER Number ( Exponent )? ) )
+            // /development/grammars/json-antlr/grammar/JSONTree.g:147:4: ^( NUMBER Number ( Exponent )? )
             {
             match(input,NUMBER,FOLLOW_NUMBER_in_number169); 
 
             match(input, Token.DOWN, null); 
-            Number2=(CommonTree)input.LT(1);
-            match(input,Number,FOLLOW_Number_in_number171); 
-            // /development/JSON Parser/grammar/JSONTree.g:143:20: ( Exponent )?
+            Number2=(CommonTree)match(input,Number,FOLLOW_Number_in_number171); 
+            // /development/grammars/json-antlr/grammar/JSONTree.g:147:20: ( Exponent )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -416,10 +431,9 @@ public class JSONTree extends TreeParser {
             }
             switch (alt3) {
                 case 1 :
-                    // /development/JSON Parser/grammar/JSONTree.g:143:20: Exponent
+                    // /development/grammars/json-antlr/grammar/JSONTree.g:147:20: Exponent
                     {
-                    Exponent3=(CommonTree)input.LT(1);
-                    match(input,Exponent,FOLLOW_Exponent_in_number173); 
+                    Exponent3=(CommonTree)match(input,Exponent,FOLLOW_Exponent_in_number173); 
 
                     }
                     break;
@@ -441,11 +455,11 @@ public class JSONTree extends TreeParser {
         }
         return result;
     }
-    // $ANTLR end number
+    // $ANTLR end "number"
 
 
-    // $ANTLR start array
-    // /development/JSON Parser/grammar/JSONTree.g:147:1: array returns [List list] : ^( ARRAY (v= value )+ ) ;
+    // $ANTLR start "array"
+    // /development/grammars/json-antlr/grammar/JSONTree.g:151:1: array returns [List list] : ^( ARRAY (v= value )+ ) ;
     public final List array() throws RecognitionException {
         List list = null;
 
@@ -454,13 +468,13 @@ public class JSONTree extends TreeParser {
 
          list = new ArrayList(); 
         try {
-            // /development/JSON Parser/grammar/JSONTree.g:149:4: ( ^( ARRAY (v= value )+ ) )
-            // /development/JSON Parser/grammar/JSONTree.g:149:4: ^( ARRAY (v= value )+ )
+            // /development/grammars/json-antlr/grammar/JSONTree.g:153:2: ( ^( ARRAY (v= value )+ ) )
+            // /development/grammars/json-antlr/grammar/JSONTree.g:153:4: ^( ARRAY (v= value )+ )
             {
             match(input,ARRAY,FOLLOW_ARRAY_in_array200); 
 
             match(input, Token.DOWN, null); 
-            // /development/JSON Parser/grammar/JSONTree.g:149:12: (v= value )+
+            // /development/grammars/json-antlr/grammar/JSONTree.g:153:12: (v= value )+
             int cnt4=0;
             loop4:
             do {
@@ -474,11 +488,12 @@ public class JSONTree extends TreeParser {
 
                 switch (alt4) {
             	case 1 :
-            	    // /development/JSON Parser/grammar/JSONTree.g:149:13: v= value
+            	    // /development/grammars/json-antlr/grammar/JSONTree.g:153:13: v= value
             	    {
             	    pushFollow(FOLLOW_value_in_array205);
             	    v=value();
-            	    _fsp--;
+
+            	    state._fsp--;
 
             	    list.add(v); 
 
@@ -508,28 +523,28 @@ public class JSONTree extends TreeParser {
         }
         return list;
     }
-    // $ANTLR end array
+    // $ANTLR end "array"
 
 
-    // $ANTLR start pair
-    // /development/JSON Parser/grammar/JSONTree.g:152:1: pair[Map map] : ^( FIELD key= String v= value ) ;
+    // $ANTLR start "pair"
+    // /development/grammars/json-antlr/grammar/JSONTree.g:156:1: pair[Map map] : ^( FIELD key= String v= value ) ;
     public final void pair(Map map) throws RecognitionException {
         CommonTree key=null;
         Object v = null;
 
 
         try {
-            // /development/JSON Parser/grammar/JSONTree.g:153:4: ( ^( FIELD key= String v= value ) )
-            // /development/JSON Parser/grammar/JSONTree.g:153:4: ^( FIELD key= String v= value )
+            // /development/grammars/json-antlr/grammar/JSONTree.g:157:2: ( ^( FIELD key= String v= value ) )
+            // /development/grammars/json-antlr/grammar/JSONTree.g:157:4: ^( FIELD key= String v= value )
             {
             match(input,FIELD,FOLLOW_FIELD_in_pair226); 
 
             match(input, Token.DOWN, null); 
-            key=(CommonTree)input.LT(1);
-            match(input,String,FOLLOW_String_in_pair230); 
+            key=(CommonTree)match(input,String,FOLLOW_String_in_pair230); 
             pushFollow(FOLLOW_value_in_pair234);
             v=value();
-            _fsp--;
+
+            state._fsp--;
 
 
             match(input, Token.UP, null); 
@@ -546,7 +561,9 @@ public class JSONTree extends TreeParser {
         }
         return ;
     }
-    // $ANTLR end pair
+    // $ANTLR end "pair"
+
+    // Delegated rules
 
 
  
@@ -568,7 +585,7 @@ public class JSONTree extends TreeParser {
     public static final BitSet FOLLOW_ARRAY_in_array200 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_value_in_array205 = new BitSet(new long[]{0x0000000000001D78L});
     public static final BitSet FOLLOW_FIELD_in_pair226 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_String_in_pair230 = new BitSet(new long[]{0x0000000000001D70L});
+    public static final BitSet FOLLOW_String_in_pair230 = new BitSet(new long[]{0x0000000000001D78L});
     public static final BitSet FOLLOW_value_in_pair234 = new BitSet(new long[]{0x0000000000000008L});
 
 }
