@@ -73,6 +73,15 @@ public class JSONTreeParserTests extends AbstractJSONTests {
     }
 
     @Test
+    public void testEmptyObject() throws IOException, RecognitionException {
+        JSONTree parser = createTreeParser("{\"one\": {} }");
+        Map result = (Map) parser.value();
+        assert result != null : "null result";
+        Map firstValue = (Map) result.get("one");
+        assert firstValue.size() == 0;
+    }
+
+    @Test
     public void testArray() throws IOException, RecognitionException {
         JSONTree parser = createTreeParser("[\"one\",2]");
         List result = (List) parser.value();
