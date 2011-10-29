@@ -21,6 +21,11 @@ public class JSONTreeParserTests extends AbstractJSONTests {
     }
 
     @Test
+    public void testUri() throws IOException, RecognitionException {
+        testViaTreeParser("\"http://www.someuri.com\"", "http://www.someuri.com");
+    }
+
+    @Test
     public void testStringWithNewine() throws IOException, RecognitionException {
         testViaTreeParser("\"new\\nline\"", "new\nline");
     }
