@@ -1,6 +1,6 @@
 {
   "is" : ["ibx-module"],
-  "module" : ["org.ixcode", "json-parser", "1.0-SNAPSHOT"],
+  "module" : ["org.ixcode", "json-parser", "1.0"],
   "dependencies" : {
     "production" : [
       "org.antlr:antlr:3.1.3",
